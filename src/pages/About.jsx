@@ -4,6 +4,11 @@ import { ChevronDown, ChevronUp, Award, Users, Globe, Shield, Linkedin, Mail, Ph
 import { COMPANY_INFO } from '@/constants/company.js'
 import fullLogo from '@/assets/logos/zubabroadbandfull.png'
 
+// Import team member photos
+import robertPhoto from '@/assets/images/robert.jpeg'
+import fredPhoto from '@/assets/images/fred.jpeg'
+import rolandPhoto from '@/assets/images/roland.jpeg'
+
 const About = () => {
   const [openFaq, setOpenFaq] = useState(null)
 
@@ -17,21 +22,21 @@ const About = () => {
       role: "CEO",
       bio: "Visionary leader with extensive experience in telecommunications and satellite technology. Driving Zuba Broadband's mission to connect the unconnected across Africa and beyond.",
       linkedin: "https://linkedin.com/in/robert-fogler",
-      image: "/api/placeholder/300/300"
+      image: robertPhoto
     },
     {
       name: "Fred Rwigamba",
       role: "CFO, COO",
       bio: "Strategic financial and operational leader with deep expertise in scaling technology companies. Overseeing Zuba Broadband's growth and operational excellence across multiple markets.",
       linkedin: "https://linkedin.com/in/fred-rwigamba",
-      image: "/api/placeholder/300/300"
+      image: fredPhoto
     },
     {
       name: "Roland Dunee",
       role: "Network and Cybersecurity Manager",
       bio: "Cybersecurity expert and network architect with specialized knowledge in satellite communications security. Ensuring robust, secure connectivity solutions for enterprise clients.",
       linkedin: "https://linkedin.com/in/roland-dunee",
-      image: "/api/placeholder/300/300"
+      image: rolandPhoto
     },
     {
       name: "Amanda Umutoni",
@@ -193,19 +198,21 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                {/* Square Image */}
-                <div className="w-full aspect-square bg-gray-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
-                    }}
-                  />
-                  <div className="hidden items-center justify-center w-full h-full">
-                    <Users className="h-12 w-12 text-gray-400" />
+                {/* Circular Image */}
+                <div className="flex justify-center mb-6">
+                  <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gray-100 shadow-lg">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                    <div className="hidden items-center justify-center w-full h-full bg-gray-200">
+                      <Users className="h-12 w-12 text-gray-400" />
+                    </div>
                   </div>
                 </div>
                 
