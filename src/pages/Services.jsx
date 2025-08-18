@@ -5,6 +5,7 @@ import ParallaxBackground from '@/components/ParallaxBackground.jsx'
 import { ArrowRight, Satellite, Wifi, Shield, Zap, Globe, Settings, Users } from 'lucide-react'
 import starlinkLong from '@/assets/images/starlink-long.png'
 import peplinkLong from '@/assets/images/peplink-long.png'
+import ctaLongImage from '@/assets/images/cta-long.png'
 
 const Services = () => {
   const starlinkSolutions = [
@@ -281,26 +282,26 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-background">
+      {/* CTA Section with Background Image */}
+      <ParallaxBackground imageSrc={ctaLongImage}>
         <div className="max-w-4xl mx-auto container-padding text-center">
           <FadeIn>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Connected?</h2>
-            <p className="text-large mb-8">
-              Our connectivity experts are ready to design the perfect solution for your needs. Get started with a free consultation.
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Get <span className="zuba-accent">Connected</span>?</h2>
+            <p className="text-large mb-8 text-white">
+              Our connectivity experts are ready to <span className="zuba-accent">design the perfect solution</span> for your needs. Get started with a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="btn-primary">
+              <Link to="/contact" className="btn-primary bg-zuba-accent hover:bg-zuba-accent-dark text-white border-zuba-accent">
                 Schedule Consultation
                 <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link to="/solutions" className="btn-secondary">
+              <Link to="/solutions" className="btn-secondary border-white text-white hover:bg-white hover:text-foreground">
                 View Solutions
               </Link>
             </div>
           </FadeIn>
         </div>
-      </section>
+      </ParallaxBackground>
     </div>
   )
 }

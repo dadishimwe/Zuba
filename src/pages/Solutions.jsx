@@ -12,6 +12,7 @@ import restaurantImage from '@/assets/images/restaurant-long.jpg'
 import schoolImage from '@/assets/images/school-long.jpg'
 import bankingImage from '@/assets/images/banking-long.jpg'
 import governmentImage from '@/assets/images/government-long.png'
+import ctaLongImage from '@/assets/images/cta-long.png'
 
 const Solutions = () => {
   const industries = [
@@ -428,26 +429,26 @@ const Solutions = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-muted">
+      {/* CTA Section with Background Image */}
+      <ParallaxBackground imageSrc={ctaLongImage}>
         <div className="max-w-4xl mx-auto container-padding text-center">
           <FadeIn>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Industry Operations?</h2>
-            <p className="text-large mb-8">
-              Our industry specialists are ready to design a connectivity solution that meets your specific business requirements and operational challenges.
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to <span className="zuba-accent">Transform</span> Your Industry Operations?</h2>
+            <p className="text-large mb-8 text-white">
+              Our industry specialists are ready to <span className="zuba-accent">design a connectivity solution</span> that meets your specific business requirements and operational challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="btn-primary">
+              <Link to="/contact" className="btn-primary bg-zuba-accent hover:bg-zuba-accent-dark text-white border-zuba-accent">
                 Schedule Industry Consultation
                 <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link to="/services" className="btn-secondary">
+              <Link to="/services" className="btn-secondary border-white text-white hover:bg-white hover:text-foreground">
                 View Our Technologies
               </Link>
             </div>
           </FadeIn>
         </div>
-      </section>
+      </ParallaxBackground>
     </div>
   )
 }

@@ -10,6 +10,7 @@ import heroImage from '@/assets/images/hero-long.jpg'
 import heroMobileImage from '@/assets/images/hero-mobile.jpg'
 import starlinkSmall from '@/assets/images/starlink-small.png'
 import starlinkxpeplink from '@/assets/images/starlinkxpeplink.png'
+import ctaLongImage from '@/assets/images/cta-long.png'
 
 const Home = () => {
   return (
@@ -486,19 +487,21 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-muted">
+      {/* CTA Section with Background Image */}
+      <ParallaxBackground imageSrc={ctaLongImage}>
         <div className="max-w-4xl mx-auto container-padding text-center">
-          <h2 className="mb-4">Ready to get connected?</h2>
-          <p className="text-large mb-8">
-            Contact us today for a free consultation and discover how we can transform your connectivity.
+          <h2 className="mb-4 text-white">
+            Ready to get <span className="zuba-accent">connected</span>?
+          </h2>
+          <p className="text-large mb-8 text-white">
+            Contact us today for a free consultation and discover how we can <span className="zuba-accent">transform</span> your connectivity.
           </p>
-          <Link to="/contact" className="btn-primary">
+          <Link to="/contact" className="btn-primary bg-zuba-accent hover:bg-zuba-accent-dark text-white border-zuba-accent">
             Get started today
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-      </section>
+      </ParallaxBackground>
     </div>
   )
 }
