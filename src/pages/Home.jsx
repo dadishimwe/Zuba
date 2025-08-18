@@ -5,68 +5,68 @@ import ParallaxBackground from '@/components/ParallaxBackground.jsx'
 import LocationMap from '@/components/LocationMap.jsx'
 import { ArrowRight, Satellite, Shield, Globe, Zap } from 'lucide-react'
 import { COMPANY_INFO, STARLINK_SERVICES } from '@/constants/company.js'
-import fullLogo from '@/assets/logos/zubabroadbandfull.png'
+import zubaLightLogo from '@/assets/logos/zuba-light-logo.png'
 import heroImage from '@/assets/images/hero-long.jpg'
 import heroMobileImage from '@/assets/images/hero-mobile.jpg'
 import starlinkSmall from '@/assets/images/starlink-small.png'
 import starlinkxpeplink from '@/assets/images/starlinkxpeplink.png'
 import ctaLongImage from '@/assets/images/cta-long.png'
 
+// Import partner logos
+import starlinkLogo from '@/assets/logos/starlink-logo.png'
+import peplinkLogo from '@/assets/logos/peplink-logo.png'
+import bkLogo from '@/assets/logos/BK logo.png'
+import starbucksLogo from '@/assets/logos/Starbucks (1).png'
+import milleCollinesLogo from '@/assets/logos/Mille Collines Logo.png'
+import primeInsuranceLogo from '@/assets/logos/Prime Insurance.png'
+import oldMutualLogo from '@/assets/logos/Old Mutual.png'
+import akageraAviationLogo from '@/assets/logos/Akagera Aviation Logo.png'
+import carnegieMellonLogo from '@/assets/logos/Carnegie Mellon Logo.png'
+import gasmethLogo from '@/assets/logos/Gasmeth Logo.jpeg'
+import armadaLogo from '@/assets/logos/Armada Logo.png'
+import brdLogo from '@/assets/logos/BRD Logo.png'
+import starlinkLightLogo from '@/assets/logos/starlink-light-logo.png'
+
 const Home = () => {
+  const partnerLogos = [
+    starlinkLogo,
+    peplinkLogo,
+    bkLogo,
+    starbucksLogo,
+    milleCollinesLogo,
+    primeInsuranceLogo,
+    oldMutualLogo,
+    akageraAviationLogo,
+    carnegieMellonLogo,
+    gasmethLogo,
+    armadaLogo,
+    brdLogo
+  ]
+
   return (
     <div className="bg-background">
       <SEOHead 
-        title="Professional Satellite Internet & SD-WAN Solutions | Connecting the Unconnected"
-        description="Authorized Starlink & Peplink reseller providing enterprise satellite internet, SD-WAN solutions & 24/7 support for businesses, maritime, aviation & remote locations worldwide."
-        keywords="starlink internet installation, peplink sd-wan solutions, satellite internet reseller, maritime connectivity, aviation internet, remote site connectivity, enterprise satellite internet, starlink business, peplink speedfusion"
+        title="Zuba Broadband Technology - Authorized Starlink & Peplink Reseller"
+        description="Professional satellite internet and SD-WAN solutions for businesses, maritime, aviation, and remote locations. Authorized Starlink and Peplink reseller."
+        keywords="starlink installation, peplink sd-wan, satellite internet, enterprise connectivity, remote location internet"
         canonical="/"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "TechnologyProvider",
-          "name": "Zuba Broadband Technology",
-          "description": "Authorized Starlink & Peplink reseller providing enterprise satellite internet and SD-WAN solutions",
-          "url": "https://zubabroadband.com",
-          "hasCredential": [
-            "Authorized Starlink Reseller",
-            "Certified Peplink Partner",
-            "FCC Licensed Installation Teams"
-          ],
-          "areaServed": "Global",
-          "serviceType": ["Satellite Internet Installation", "SD-WAN Solutions", "Network Infrastructure"],
-          "offers": [
-            {
-              "@type": "Service",
-              "name": "Starlink Satellite Internet Installation",
-              "description": "Professional Starlink installation for residential, business, maritime, and aviation applications",
-              "areaServed": "Global",
-              "serviceType": "Satellite Internet Installation"
-            },
-            {
-              "@type": "Service", 
-              "name": "Peplink SD-WAN Solutions",
-              "description": "Enterprise-grade SD-WAN and SpeedFusion bonding solutions",
-              "areaServed": "Global",
-              "serviceType": "SD-WAN Solutions"
-            }
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-800-ZUBA-NET",
-            "contactType": "customer service",
-            "availableLanguage": "English",
-            "areaServed": "Global"
-          }
-        }}
       />
-      
-      {/* Hero Section with Background Image */}
+
+      {/* Hero Section */}
       <ParallaxBackground imageSrc={heroImage} mobileImageSrc={heroMobileImage}>
         <div className="max-w-7xl mx-auto container-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
               <FadeIn>
-                <h1 className="mb-4 lg:mb-6 text-white text-3xl md:text-4xl lg:text-5xl">
-                  Connecting the unconnected with <span className="zuba-accent">reliable satellite internet</span>
+                <img
+                  src={zubaLightLogo}
+                  alt="Zuba Broadband Technology"
+                  className="h-16 w-auto mb-8"
+                />
+              </FadeIn>
+              <FadeIn delay={200}>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+                  Connecting the <span className="zuba-accent">Unconnected</span>
                 </h1>
               </FadeIn>
               <FadeIn delay={200}>
@@ -75,58 +75,51 @@ const Home = () => {
                 </p>
               </FadeIn>
               <FadeIn delay={400}>
-                <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
-                  <Link to="/contact" className="btn-primary bg-white text-foreground hover:bg-white/90 text-center">
-                    Get started
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                  <Link to="/services" className="btn-secondary border-white text-white hover:bg-white hover:text-foreground text-center">
-                    Explore services
-                  </Link>
-                </div>
+                <Link to="/contact" className="btn-primary">
+                  Get Started
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </FadeIn>
             </div>
             <div className="lg:col-span-5">
               <FadeIn delay={600} direction="right">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-8 xl:p-12 border border-white/20">
-                  {/* Logo Section */}
-                  <div className="text-center mb-6 lg:mb-8">
-                    <img 
-                      src={fullLogo} 
-                      alt="Zuba Broadband Technology" 
-                      className="h-12 lg:h-16 w-auto mx-auto mb-3 lg:mb-4"
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-white/20">
+                  <div className="text-center mb-6">
+                    <img
+                      src={zubaLightLogo}
+                      alt="Zuba Broadband Technology"
+                      className="h-12 w-auto mx-auto mb-4"
                     />
-                    <p className="text-xs lg:text-small text-white/90">
+                    <p className="text-xs text-white/90">
                       Authorized Starlink & Peplink Reseller
                     </p>
                   </div>
-                  
-                  <div className="space-y-4 lg:space-y-6">
-                    <div className="flex items-center gap-3 lg:gap-4">
-                      <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-white/20 flex items-center justify-center flex-shrink-0">
-                        <Globe className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-4">
+                      <div className="h-12 w-12 rounded-lg bg-white/20 flex items-center justify-center">
+                        <Globe className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <div className="font-medium text-white text-sm lg:text-base">Global Coverage</div>
-                        <div className="text-xs lg:text-small text-white/80">Worldwide connectivity</div>
+                        <div className="font-medium text-white">Global Coverage</div>
+                        <div className="text-small text-white/70">Worldwide connectivity</div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-3 lg:gap-4">
-                      <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-white/20 flex items-center justify-center flex-shrink-0">
-                        <Shield className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
+                    <div className="flex items-center gap-4">
+                      <div className="h-12 w-12 rounded-lg bg-white/20 flex items-center justify-center">
+                        <Shield className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <div className="font-medium text-white text-sm lg:text-base">99.9% Uptime</div>
-                        <div className="text-xs lg:text-small text-white/80">Enterprise reliability</div>
+                        <div className="font-medium text-white">99.9% Uptime</div>
+                        <div className="text-small text-white/70">Enterprise reliability</div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-3 lg:gap-4">
-                      <div className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg bg-white/20 flex items-center justify-center flex-shrink-0">
-                        <Zap className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
+                    <div className="flex items-center gap-4">
+                      <div className="h-12 w-12 rounded-lg bg-white/20 flex items-center justify-center">
+                        <Zap className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <div className="font-medium text-white text-sm lg:text-base">24/7 Support</div>
-                        <div className="text-xs lg:text-small text-white/80">Expert assistance</div>
+                        <div className="font-medium text-white">24/7 Support</div>
+                        <div className="text-small text-white/70">Expert assistance</div>
                       </div>
                     </div>
                   </div>
@@ -137,355 +130,183 @@ const Home = () => {
         </div>
       </ParallaxBackground>
 
-      {/* Starlink Small Image Section */}
+      {/* Starlink Section */}
       <section className="section-padding bg-background">
         <div className="max-w-7xl mx-auto container-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
               <FadeIn>
-                <h2 className="mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   <span className="zuba-blue">Starlink</span> Satellite Internet
                 </h2>
               </FadeIn>
               <FadeIn delay={200}>
-                <p className="text-large mb-8 max-w-2xl">
-                  High-speed, low-latency satellite internet that <span className="zuba-accent">connects you anywhere</span> on Earth. From residential to enterprise, maritime to aviation, Starlink delivers <span className="zuba-accent">reliable connectivity</span> where traditional internet can't reach.
+                <p className="text-large mb-8">
+                  High-speed, low-latency satellite internet for <span className="zuba-accent">reliable connectivity</span> anywhere on Earth. Perfect for businesses, remote locations, maritime, and aviation applications.
                 </p>
               </FadeIn>
               <FadeIn delay={400}>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link to="/starlink-services" className="btn-primary">
-                    Explore Starlink
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                  <Link to="/contact" className="btn-secondary">
-                    Get Quote
-                  </Link>
-                </div>
-              </FadeIn>
-            </div>
-            <div className="lg:col-span-5">
-              <FadeIn delay={600} direction="right">
-                <div className="flex justify-center">
-                  <img 
-                    src={starlinkSmall} 
-                    alt="Starlink Satellite Internet" 
-                    className="max-w-full h-auto rounded-lg shadow-lg"
-                  />
-                </div>
-              </FadeIn>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Starlink x Peplink Partnership Image */}
-      <section className="py-16 bg-muted">
-        <div className="max-w-7xl mx-auto container-padding">
-          <FadeIn>
-            <div className="flex justify-center">
-              <img 
-                src={starlinkxpeplink} 
-                alt="Starlink and Peplink Partnership" 
-                className="max-w-full h-auto rounded-lg shadow-lg"
-              />
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Features Section - Centered with Grid */}
-      <section className="section-padding">
-        <div className="max-w-6xl mx-auto container-padding">
-          <FadeIn>
-            <div className="text-center mb-16">
-              <h2 className="mb-4">
-                Professional satellite <span className="zuba-accent">connectivity solutions</span>
-              </h2>
-              <p className="text-large max-w-2xl mx-auto">
-                From <span className="zuba-accent">high-speed</span> residential internet to <span className="zuba-accent">enterprise</span> maritime solutions, we deliver <span className="zuba-accent">reliable connectivity</span> where traditional internet fails.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Starlink Services */}
-            <FadeIn delay={100}>
-              <div className="card-hover rounded-lg p-8 bg-card">
-              <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center mb-6">
-                <Satellite className="h-6 w-6 text-foreground" />
-              </div>
-              <h3 className="mb-4"><span className="zuba-blue">Starlink</span> Internet</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                High-speed, low-latency satellite internet for any location. Perfect for <span className="zuba-accent">remote work</span>, streaming, and <span className="zuba-accent">critical business operations</span>.
-              </p>
-              <div className="space-y-2 text-small mb-6">
-                <div className="flex justify-between">
-                  <span>Residential:</span>
-                  <span className="font-medium">{STARLINK_SERVICES.residential.speeds}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Business:</span>
-                  <span className="font-medium">{STARLINK_SERVICES.business.speeds}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Maritime:</span>
-                  <span className="font-medium">Global coverage</span>
-                </div>
-              </div>
-              <Link to="/services" className="inline-flex items-center text-foreground text-sm font-medium hover:opacity-80 transition-opacity">
-                Learn more
-                <ArrowRight className="h-4 w-4 ml-1" />
-              </Link>
-              </div>
-            </FadeIn>
-
-            {/* Peplink SD-WAN */}
-            <FadeIn delay={200}>
-              <div className="card-hover rounded-lg p-8 bg-card">
-              <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center mb-6">
-                <Shield className="h-6 w-6 text-foreground" />
-              </div>
-              <h3 className="mb-4"><span className="zuba-blue">Peplink</span> SD-WAN</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                <span className="zuba-accent">Unbreakable connectivity</span> with intelligent bonding and seamless failover for <span className="zuba-accent">mission-critical operations</span>.
-              </p>
-              <div className="space-y-2 text-small mb-6">
-                <div>• SpeedFusion Technology</div>
-                <div>• Multi-WAN Load Balancing</div>
-                <div>• Automatic Failover</div>
-                <div>• Centralized Management</div>
-              </div>
-              <Link to="/solutions" className="inline-flex items-center text-foreground text-sm font-medium hover:opacity-80 transition-opacity">
-                Learn more
-                <ArrowRight className="h-4 w-4 ml-1" />
-              </Link>
-              </div>
-            </FadeIn>
-
-            {/* Installation & Support */}
-            <FadeIn delay={300}>
-              <div className="card-hover rounded-lg p-8 bg-card">
-              <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center mb-6">
-                <Zap className="h-6 w-6 text-foreground" />
-              </div>
-              <h3 className="mb-4"><span className="zuba-accent">Expert</span> Installation</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                <span className="zuba-accent">Professional installation</span> and 24/7 technical support from certified technicians with years of experience.
-              </p>
-              <div className="space-y-2 text-small mb-6">
-                <div>• Certified Technicians</div>
-                <div>• Site Surveys & Optimization</div>
-                <div>• 24/7 Monitoring</div>
-                <div>• {COMPANY_INFO.stats.responseTime} Response Time</div>
-              </div>
-              <Link to="/contact" className="inline-flex items-center text-foreground text-sm font-medium hover:opacity-80 transition-opacity">
-                Get support
-                <ArrowRight className="h-4 w-4 ml-1" />
-              </Link>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section - Right Aligned */}
-      <section className="section-padding bg-muted">
-        <div className="max-w-7xl mx-auto container-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5">
-              <FadeIn direction="left">
-                <div className="bg-background rounded-2xl p-8 lg:p-12">
-                  <div className="text-center">
-                    <div className="text-4xl font-semibold text-foreground mb-2">
-                      {COMPANY_INFO.stats.customersSatisfied}
-                    </div>
-                    <div className="text-muted-foreground mb-6">Satisfied customers worldwide</div>
-                    <div className="grid grid-cols-3 gap-4 text-center">
-                      <div>
-                        <div className="text-xl font-medium text-foreground">{COMPANY_INFO.stats.uptimeGuarantee}</div>
-                        <div className="text-small text-muted-foreground">Uptime</div>
-                      </div>
-                      <div>
-                        <div className="text-xl font-medium text-foreground">{COMPANY_INFO.stats.coverageAreas}+</div>
-                        <div className="text-small text-muted-foreground">Locations</div>
-                      </div>
-                      <div>
-                        <div className="text-xl font-medium text-foreground">{COMPANY_INFO.stats.yearsInBusiness}</div>
-                        <div className="text-small text-muted-foreground">Years</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-            </div>
-            <div className="lg:col-span-7">
-              <FadeIn delay={200}>
-                <h2 className="mb-4">Trusted by thousands worldwide</h2>
-                <p className="text-large mb-8">
-                  Our track record speaks for itself. From small businesses to large enterprises, maritime operations to remote research stations, we've delivered reliable connectivity solutions across the globe.
-                </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-muted-foreground">Industry-leading uptime guarantee</span>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span>25-220 Mbps download speeds</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span className="text-muted-foreground">Global coverage in 150+ locations</span>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span>Low latency (20-40ms)</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span className="text-muted-foreground">8+ years of satellite expertise</span>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span>Global coverage</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span>Professional installation</span>
                   </div>
                 </div>
+              </FadeIn>
+              <FadeIn delay={600}>
+                <Link to="/starlink-services" className="btn-primary mt-8">
+                  Learn More
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </FadeIn>
+            </div>
+            <div>
+              <FadeIn delay={600} direction="right">
+                <img
+                  src={starlinkSmall}
+                  alt="Starlink Satellite Internet"
+                  className="w-full h-auto rounded-2xl shadow-lg"
+                />
               </FadeIn>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us - Left Aligned */}
-      <section className="section-padding">
+      {/* Starlink x Peplink Section */}
+      <section className="section-padding bg-muted">
         <div className="max-w-7xl mx-auto container-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <div className="lg:col-span-6">
-              <FadeIn>
-                <h2 className="mb-4">Why choose Zuba Broadband?</h2>
-                <p className="text-large mb-8">
-                  We combine cutting-edge technology with expert support to deliver reliable connectivity solutions for any environment.
+          <div className="text-center mb-12">
+            <FadeIn>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <span className="zuba-blue">Starlink</span> + <span className="zuba-accent">Peplink</span> = <span className="zuba-accent">Unbreakable</span> Connectivity
+              </h2>
+            </FadeIn>
+            <FadeIn delay={200}>
+              <p className="text-large max-w-3xl mx-auto">
+                Combine the power of Starlink satellite internet with Peplink's advanced SD-WAN technology for enterprise-grade reliability and performance.
+              </p>
+            </FadeIn>
+          </div>
+          <FadeIn delay={400}>
+            <img
+              src={starlinkxpeplink}
+              alt="Starlink and Peplink Integration"
+              className="w-full h-auto rounded-2xl shadow-lg"
+            />
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Trusted Technology Partners */}
+      <section className="section-padding bg-background">
+        <div className="max-w-7xl mx-auto container-padding">
+          <div className="text-center mb-12">
+            <FadeIn>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Trusted Technology Partners</h2>
+            </FadeIn>
+            <FadeIn delay={200}>
+              <p className="text-large max-w-3xl mx-auto">
+                We partner with industry leaders to deliver the most reliable and advanced connectivity solutions.
+              </p>
+            </FadeIn>
+          </div>
+          
+          <div className="relative overflow-hidden">
+            <div className="flex animate-slide-left">
+              {/* First set of logos */}
+              {partnerLogos.map((logo, index) => (
+                <div key={index} className="flex-shrink-0 mx-8">
+                  <img
+                    src={logo}
+                    alt={`Partner Logo ${index + 1}`}
+                    className="h-16 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {partnerLogos.map((logo, index) => (
+                <div key={`duplicate-${index}`} className="flex-shrink-0 mx-8">
+                  <img
+                    src={logo}
+                    alt={`Partner Logo ${index + 1}`}
+                    className="h-16 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Zuba Broadband */}
+      <section className="section-padding bg-muted">
+        <div className="max-w-7xl mx-auto container-padding">
+          <div className="text-center mb-16">
+            <FadeIn>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Zuba Broadband?</h2>
+            </FadeIn>
+            <FadeIn delay={200}>
+              <p className="text-large max-w-3xl mx-auto">
+                We combine cutting-edge technology with expert service to deliver connectivity solutions that keep your business connected, anywhere in the world.
+              </p>
+            </FadeIn>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <FadeIn delay={200}>
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Satellite className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Authorized Reseller</h3>
+                <p className="text-muted-foreground">
+                  Official Starlink and Peplink partner with direct access to the latest technology and support.
                 </p>
-              </FadeIn>
-              
-              <FadeIn delay={200}>
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                      <Globe className="h-6 w-6 text-foreground" />
-                    </div>
-                    <div>
-                      <h4 className="mb-2">Global Coverage</h4>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Connect anywhere on Earth, even the most remote locations where traditional internet fails.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                      <Shield className="h-6 w-6 text-foreground" />
-                    </div>
-                    <div>
-                      <h4 className="mb-2">Unbreakable Connectivity</h4>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Leverage SD-WAN technology for seamless failover and intelligent traffic management.
-                      </p>
-                    </div>
-                  </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={400}>
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Globe className="h-8 w-8 text-primary" />
                 </div>
-              </FadeIn>
-            </div>
-            
-            <div className="lg:col-span-6">
-              <FadeIn delay={400}>
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                      <Zap className="h-6 w-6 text-foreground" />
-                    </div>
-                    <div>
-                      <h4 className="mb-2">Expert Support</h4>
-                      <p className="text-muted-foreground leading-relaxed">
-                        24/7 technical assistance from certified professionals with years of satellite experience.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                      <Satellite className="h-6 w-6 text-foreground" />
-                    </div>
-                    <div>
-                      <h4 className="mb-2">High Performance</h4>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Experience low-latency, high-speed internet optimized for business-critical applications.
-                      </p>
-                    </div>
-                  </div>
+                <h3 className="text-xl font-semibold mb-4">Global Coverage</h3>
+                <p className="text-muted-foreground">
+                  Satellite internet available in 100+ countries with local installation and support teams.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={600}>
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Shield className="h-8 w-8 text-primary" />
                 </div>
-              </FadeIn>
-            </div>
+                <h3 className="text-xl font-semibold mb-4">Enterprise Reliability</h3>
+                <p className="text-muted-foreground">
+                  99.9% uptime guarantee with 24/7 monitoring and emergency response capabilities.
+                </p>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
       {/* Location Map */}
       <LocationMap />
-
-      {/* Trusted Partners Section */}
-      <section className="section-padding bg-background overflow-hidden">
-        <div className="max-w-6xl mx-auto container-padding">
-          <FadeIn>
-            <div className="text-center mb-12">
-              <h2 className="mb-4">Trusted Technology Partners</h2>
-              <p className="text-large max-w-2xl mx-auto text-muted-foreground">
-                We partner with industry leaders to deliver the most reliable and innovative connectivity solutions.
-              </p>
-            </div>
-          </FadeIn>
-          
-          {/* Infinite Sliding Logos */}
-          <div className="relative">
-            <div className="flex animate-slide-left">
-              {/* First set of logos */}
-              <div className="flex items-center justify-center min-w-0 shrink-0">
-                <div className="flex items-center gap-16 px-8">
-                  <div className="text-2xl font-bold text-muted-foreground/70 hover:text-foreground transition-colors duration-300">
-                    Starlink
-                  </div>
-                  <div className="text-2xl font-bold text-muted-foreground/70 hover:text-foreground transition-colors duration-300">
-                    Peplink
-                  </div>
-                  <div className="text-2xl font-bold text-muted-foreground/70 hover:text-foreground transition-colors duration-300">
-                    SpaceX
-                  </div>
-                  <div className="text-2xl font-bold text-muted-foreground/70 hover:text-foreground transition-colors duration-300">
-                    Ubiquiti Networks
-                  </div>
-                  <div className="text-2xl font-bold text-muted-foreground/70 hover:text-foreground transition-colors duration-300">
-                    SonicWall
-                  </div>
-                  <div className="text-2xl font-bold text-muted-foreground/70 hover:text-foreground transition-colors duration-300">
-                    Cambium Networks
-                  </div>
-                </div>
-              </div>
-              
-              {/* Duplicate set for seamless loop */}
-              <div className="flex items-center justify-center min-w-0 shrink-0">
-                <div className="flex items-center gap-16 px-8">
-                  <div className="text-2xl font-bold text-muted-foreground/70 hover:text-foreground transition-colors duration-300">
-                    Starlink
-                  </div>
-                  <div className="text-2xl font-bold text-muted-foreground/70 hover:text-foreground transition-colors duration-300">
-                    Peplink
-                  </div>
-                  <div className="text-2xl font-bold text-muted-foreground/70 hover:text-foreground transition-colors duration-300">
-                    SpaceX
-                  </div>
-                  <div className="text-2xl font-bold text-muted-foreground/70 hover:text-foreground transition-colors duration-300">
-                    Ubiquiti Networks
-                  </div>
-                  <div className="text-2xl font-bold text-muted-foreground/70 hover:text-foreground transition-colors duration-300">
-                    SonicWall
-                  </div>
-                  <div className="text-2xl font-bold text-muted-foreground/70 hover:text-foreground transition-colors duration-300">
-                    Cambium Networks
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section with Background Image */}
       <ParallaxBackground imageSrc={ctaLongImage}>

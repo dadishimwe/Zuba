@@ -153,7 +153,7 @@ const Services = () => {
         </div>
       </ParallaxBackground>
 
-      {/* Starlink Solutions Grid */}
+      {/* Starlink Solutions Details */}
       <section className="section-padding bg-background">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

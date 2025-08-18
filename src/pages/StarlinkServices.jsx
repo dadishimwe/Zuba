@@ -7,6 +7,7 @@ import { ArrowRight, Download, Play, Satellite, Globe, Zap, Shield, Signal, Wifi
 
 // Import the long image
 import starlinkLongImage from '@/assets/images/starlink-long.png';
+import starlinkLightLogo from '@/assets/logos/starlink-light-logo.png';
 
 const StarlinkServices = () => {
   const starlinkPlans = [
@@ -76,81 +77,35 @@ const StarlinkServices = () => {
         canonical="/starlink-services"
       />
 
-      {/* Hero Section - Starlink Style with Parallax Background */}
-      <ParallaxBackground imageSrc={starlinkLongImage} className="bg-black">
+      {/* Hero Section */}
+      <section className="section-padding pt-32 bg-gradient-to-br from-gray-900 via-black to-gray-800">
         <div className="max-w-7xl mx-auto container-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7">
-              <FadeIn>
-                <div className="flex items-center gap-3 mb-6">
-                  <Satellite className="h-8 w-8 text-blue-400" />
-                  <span className="text-xl font-semibold text-blue-400">Starlink</span>
-                  <span className="text-sm text-gray-400">by Zuba Broadband</span>
-                </div>
-              </FadeIn>
-              <FadeIn delay={200}>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                  Internet for
-                  <span className="block text-blue-400">anywhere</span>
-                </h1>
-              </FadeIn>
-              <FadeIn delay={400}>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
-                  High-speed, low-latency satellite internet powered by the world's most advanced satellite constellation.
-                </p>
-              </FadeIn>
-              <FadeIn delay={600}>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center justify-center">
-                    Order Starlink
-                    <ArrowRight className="h-5 w-5 ml-2" />
-                  </button>
-                  <Link to="/contact" className="border border-gray-600 hover:border-gray-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 text-center">
-                    Learn More
-                  </Link>
-                </div>
-              </FadeIn>
-            </div>
-            <div className="lg:col-span-5">
-              <FadeIn delay={800} direction="right">
-                <div className="relative">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-12">
-                    <div className="space-y-6">
-                      <div className="flex items-center gap-4">
-                        <div className="h-12 w-12 rounded-lg bg-white/20 flex items-center justify-center">
-                          <Globe className="h-6 w-6 text-white" />
-                        </div>
-                        <div>
-                          <div className="font-semibold text-white">Global Coverage</div>
-                          <div className="text-blue-100">Available worldwide</div>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <div className="h-12 w-12 rounded-lg bg-white/20 flex items-center justify-center">
-                          <Zap className="h-6 w-6 text-white" />
-                        </div>
-                        <div>
-                          <div className="font-semibold text-white">High-Speed Internet</div>
-                          <div className="text-blue-100">Up to 350 Mbps</div>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <div className="h-12 w-12 rounded-lg bg-white/20 flex items-center justify-center">
-                          <Shield className="h-6 w-6 text-white" />
-                        </div>
-                        <div>
-                          <div className="font-semibold text-white">Weather Resilient</div>
-                          <div className="text-blue-100">Reliable in all conditions</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-            </div>
+          <div className="text-center mb-16">
+            <FadeIn>
+              <img
+                src={starlinkLightLogo}
+                alt="Starlink"
+                className="h-20 w-auto mx-auto mb-8"
+              />
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+                <span className="text-white">Starlink</span>
+                <span className="block text-gray-300">Satellite Internet</span>
+              </h1>
+            </FadeIn>
+            <FadeIn delay={200}>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                High-speed, low-latency satellite internet for reliable connectivity anywhere on Earth. From residential to enterprise, maritime to aviation applications.
+              </p>
+            </FadeIn>
+            <FadeIn delay={400}>
+              <Link to="/contact" className="btn-primary bg-white text-gray-900 hover:bg-gray-100">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </FadeIn>
           </div>
         </div>
-      </ParallaxBackground>
+      </section>
 
       {/* Starlink Plans */}
       <section className="py-20 bg-gray-900">

@@ -7,6 +7,7 @@ import { ArrowRight, Download, Play, Layers, Network, Zap, Shield, Router, Activ
 
 // Import the long image
 import peplinkLongImage from '@/assets/images/peplink-long.png';
+import peplinkLogo from '@/assets/logos/peplink-logo.png';
 
 const PeplinkServices = () => {
   const peplinkSolutions = [
@@ -80,80 +81,32 @@ const PeplinkServices = () => {
         canonical="/peplink-services"
       />
 
-      {/* Hero Section - Peplink Style with Parallax Background */}
-      <ParallaxBackground imageSrc={peplinkLongImage} className="bg-white">
+      {/* Hero Section with Parallax Background */}
+      <ParallaxBackground imageSrc={peplinkLongImage}>
         <div className="max-w-7xl mx-auto container-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7">
-              <FadeIn>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-8 w-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-                    <Network className="h-5 w-5 text-white" />
-                  </div>
-                  <span className="text-xl font-semibold text-white">Peplink</span>
-                  <span className="text-sm text-white/80">by Zuba Broadband</span>
-                </div>
-              </FadeIn>
-              <FadeIn delay={200}>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                  <span className="text-orange-600">Unbreakable</span>
-                  <span className="block text-white">Connectivity</span>
-                </h1>
-              </FadeIn>
-              <FadeIn delay={400}>
-                <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl leading-relaxed">
-                  Advanced SD-WAN solutions with SpeedFusion technology for enterprise-grade network reliability and performance.
-                </p>
-              </FadeIn>
-              <FadeIn delay={600}>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center justify-center">
-                    Explore Solutions
-                    <ArrowRight className="h-5 w-5 ml-2" />
-                  </button>
-                  <Link to="/contact" className="border-2 border-orange-500 hover:bg-orange-500 hover:text-white text-orange-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 text-center">
-                    Get Quote
-                  </Link>
-                </div>
-              </FadeIn>
-            </div>
-            <div className="lg:col-span-5">
-              <FadeIn delay={800} direction="right">
-                <div className="relative">
-                  <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 lg:p-12 text-white">
-                    <div className="space-y-6">
-                      <div className="flex items-center gap-4">
-                        <div className="h-12 w-12 rounded-lg bg-white/20 flex items-center justify-center">
-                          <Layers className="h-6 w-6 text-white" />
-                        </div>
-                        <div>
-                          <div className="font-semibold">SpeedFusion Bonding</div>
-                          <div className="text-orange-100">Multiple WAN aggregation</div>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <div className="h-12 w-12 rounded-lg bg-white/20 flex items-center justify-center">
-                          <Shield className="h-6 w-6 text-white" />
-                        </div>
-                        <div>
-                          <div className="font-semibold">Hot Failover</div>
-                          <div className="text-orange-100">Zero downtime switching</div>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <div className="h-12 w-12 rounded-lg bg-white/20 flex items-center justify-center">
-                          <Monitor className="h-6 w-6 text-white" />
-                        </div>
-                        <div>
-                          <div className="font-semibold">InControl 2</div>
-                          <div className="text-orange-100">Cloud management</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-            </div>
+          <div className="text-center">
+            <FadeIn>
+              <img
+                src={peplinkLogo}
+                alt="Peplink"
+                className="h-20 w-auto mx-auto mb-8"
+              />
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                <span className="text-orange-600">Unbreakable</span>
+                <span className="block text-white">Connectivity</span>
+              </h1>
+            </FadeIn>
+            <FadeIn delay={400}>
+              <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl leading-relaxed">
+                Advanced SD-WAN solutions with <span className="zuba-blue">SpeedFusion technology</span> for enterprise-grade network reliability and performance.
+              </p>
+            </FadeIn>
+            <FadeIn delay={600}>
+              <Link to="/contact" className="btn-primary bg-orange-600 hover:bg-orange-700 text-white border-orange-600">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </FadeIn>
           </div>
         </div>
       </ParallaxBackground>
