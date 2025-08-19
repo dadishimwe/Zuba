@@ -95,13 +95,13 @@ const Manufacturing = () => {
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">
                     Manufacturing & Industrial
                   </h1>
-                  <p className="text-lg text-white/90 font-medium">Industry 4.0 Connectivity</p>
+                  <p className="text-lg text-white font-medium">Industry 4.0 <span className="text-orange-400 font-semibold">Connectivity</span></p>
                 </div>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                Power your smart factory with industrial-grade connectivity solutions supporting IoT, automation, and operational technology systems.
+              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white">
+                Power your smart factory with industrial-grade connectivity solutions supporting <span className="text-orange-400 font-semibold">IoT, automation, and operational technology systems</span>.
               </p>
             </FadeIn>
             <FadeIn delay={400}>

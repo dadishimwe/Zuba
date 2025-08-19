@@ -116,14 +116,14 @@ const BankingFinance = () => {
                     <span className="zuba-accent">Banking</span> & Finance
                   </h1>
                   <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl leading-relaxed">
-                    Secure, <span className="zuba-blue">PCI DSS compliant</span> connectivity solutions for financial institutions, trading floors, and fintech operations.
+                    Secure, <span className="text-orange-400 font-semibold">PCI DSS compliant</span> connectivity solutions for financial institutions, trading floors, and fintech operations.
                   </p>
                 </div>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white/90">
-                Mission-critical network infrastructure designed for financial institutions requiring the highest levels of security, compliance, and reliability.
+              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white">
+                Mission-critical network infrastructure designed for financial institutions requiring the highest levels of <span className="text-orange-400 font-semibold">security, compliance, and reliability</span>.
               </p>
             </FadeIn>
             <FadeIn delay={400}>

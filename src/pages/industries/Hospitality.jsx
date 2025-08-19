@@ -88,13 +88,13 @@ const Hospitality = () => {
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">
                     <span className="zuba-accent">Hotels</span> & Hospitality
                   </h1>
-                  <p className="text-lg text-white/90 font-medium">Premium <span className="zuba-blue">Guest Experience</span></p>
+                  <p className="text-lg text-white font-medium">Premium Guest Experience</p>
                 </div>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                Transform your guest experience with <span className="zuba-blue">enterprise-grade Wi-Fi</span> and operational connectivity that exceeds expectations and drives positive reviews.
+              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white">
+                Transform your guest experience with <span className="text-orange-400 font-semibold">enterprise-grade Wi-Fi</span> and operational connectivity that exceeds expectations and drives positive reviews.
               </p>
             </FadeIn>
             <FadeIn delay={400}>

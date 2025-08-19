@@ -81,13 +81,13 @@ const Government = () => {
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">
                     <span className="zuba-accent">Government</span> & Public Safety
                   </h1>
-                  <p className="text-lg text-white/90 font-medium">Secure <span className="zuba-blue">Mission-Critical</span> Networks</p>
+                  <p className="text-lg text-white font-medium">Secure <span className="text-orange-400 font-semibold">Mission-Critical</span> Networks</p>
                 </div>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white/90">
-                Secure, compliant connectivity solutions designed for government agencies, emergency services, and public safety organizations requiring the <span className="zuba-accent">highest levels of security</span> and reliability.
+              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white">
+                Secure, compliant connectivity solutions designed for government agencies, emergency services, and public safety organizations requiring the <span className="text-orange-400 font-semibold">highest levels of security</span> and reliability.
               </p>
             </FadeIn>
             <FadeIn delay={400}>

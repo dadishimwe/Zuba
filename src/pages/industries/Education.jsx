@@ -88,13 +88,13 @@ const Education = () => {
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">
                     <span className="zuba-accent">Education</span> Solutions
                   </h1>
-                  <p className="text-lg text-white/90 font-medium">Empowering <span className="zuba-blue">Digital Learning</span></p>
+                  <p className="text-lg text-white font-medium">Empowering <span className="text-orange-400 font-semibold">Digital Learning</span></p>
                 </div>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                Comprehensive connectivity solutions that enable <span className="zuba-accent">modern education</span>, from K-12 digital learning initiatives to university research networks.
+              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white">
+                Comprehensive connectivity solutions that enable <span className="text-orange-400 font-semibold">modern education</span>, from K-12 digital learning initiatives to university research networks.
               </p>
             </FadeIn>
             <FadeIn delay={400}>

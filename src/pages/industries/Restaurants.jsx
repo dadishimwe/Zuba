@@ -88,13 +88,13 @@ const Restaurants = () => {
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">
                     Restaurants & Cafes
                   </h1>
-                  <p className="text-lg text-white/90 font-medium">Connected Dining Experience</p>
+                  <p className="text-lg text-white font-medium">Connected <span className="text-orange-400 font-semibold">Dining Experience</span></p>
                 </div>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                Keep your restaurant running smoothly with reliable connectivity for POS systems, online ordering, guest Wi-Fi, and multi-location management.
+              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white">
+                Keep your restaurant running smoothly with reliable connectivity for <span className="text-orange-400 font-semibold">POS systems, online ordering, guest Wi-Fi, and multi-location management</span>.
               </p>
             </FadeIn>
             <FadeIn delay={400}>
