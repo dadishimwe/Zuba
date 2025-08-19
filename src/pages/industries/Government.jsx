@@ -3,30 +3,49 @@ import { Link } from 'react-router-dom';
 import SEOHead from '@/components/SEOHead.jsx';
 import FadeIn from '@/components/FadeIn.jsx';
 import ParallaxBackground from '@/components/ParallaxBackground.jsx';
-import { ArrowRight, Building2, Shield, Lock, AlertTriangle, CheckCircle, Users, Clock, Globe, Radio, Zap, Server } from 'lucide-react';
+import { ArrowRight, Building2, Shield, Lock, Activity, CheckCircle, Users, Clock, Globe, Zap, Monitor } from 'lucide-react';
 import governmentImage from '@/assets/images/government-long.png';
+import backupImage from '@/assets/images/solutions/backup.jpg';
+import securityImage from '@/assets/images/solutions/Internet-security.jpg';
+import vpnImage from '@/assets/images/solutions/peplink-vpn.png';
 
 const Government = () => {
   const solutions = [
     {
-      title: 'Secure Agency Networks',
-      description: 'FedRAMP authorized connectivity solutions for government agencies and contractors',
-      features: ['FedRAMP High authorization', 'FIPS 140-2 encryption', 'Continuous monitoring', 'Dedicated government cloud access']
+      title: 'Reliable Backup with Hot Failover',
+      description: 'Instant redundancy ensuring continuous public services with automatic failover systems and zero downtime capabilities.',
+      features: [
+        'Automatic failover to backup connections',
+        'Zero downtime during network transitions',
+        'Redundant infrastructure across multiple locations',
+        'Real-time monitoring and alert systems'
+      ],
+      image: backupImage,
+      imageAlt: 'Reliable backup and failover systems for government'
     },
     {
-      title: 'Emergency Operations Centers',
-      description: 'Mission-critical connectivity for disaster response and public safety operations',
-      features: ['99.999% uptime guarantee', 'Redundant satellite backup', 'Priority traffic routing', 'Real-time coordination platforms']
+      title: 'Secure Internet Solutions',
+      description: 'Government-grade security meeting federal compliance requirements with advanced threat protection and monitoring.',
+      features: [
+        'Federal compliance and security standards',
+        'Advanced threat detection and prevention',
+        'Comprehensive audit logging and reporting',
+        'Multi-layer security architecture'
+      ],
+      image: securityImage,
+      imageAlt: 'Secure internet solutions for government agencies'
     },
     {
-      title: 'Inter-Agency Communications',
-      description: 'Secure, reliable connections between government departments and facilities',
-      features: ['Encrypted tunnel connections', 'Multi-level security clearance support', 'Audit trail compliance', 'Cross-jurisdiction connectivity']
-    },
-    {
-      title: 'Public Safety Networks',
-      description: 'Critical communications infrastructure for first responders and law enforcement',
-      features: ['FirstNet compatibility', 'Mobile command center support', 'Push-to-talk integration', 'Officer safety applications']
+      title: 'VPN Connectivity',
+      description: 'Secure inter-agency communication and remote access capabilities with encrypted data transmission.',
+      features: [
+        'Encrypted inter-agency communications',
+        'Secure remote access for government employees',
+        'Multi-factor authentication systems',
+        'Compliance with government security protocols'
+      ],
+      image: vpnImage,
+      imageAlt: 'VPN connectivity for government agencies'
     }
   ];
 
@@ -35,14 +54,14 @@ const Government = () => {
       title: 'County Emergency Management Upgrade',
       client: 'Riverside County Emergency Services',
       challenge: 'A county emergency management agency needed reliable backup communications for their primary EOC and 15 remote facilities during natural disasters when terrestrial infrastructure often fails.',
-      solution: 'Implemented Starlink Emergency services with Peplink redundancy across all facilities, creating a mesh network that maintains connectivity even when traditional infrastructure is compromised.',
+      solution: 'Implemented reliable backup systems with hot failover capabilities and secure VPN connectivity across all emergency facilities.',
       results: [
         '100% communication uptime during 3 major disasters',
         '50% faster emergency response coordination',
         'Real-time resource allocation and tracking',
         'Seamless integration with state emergency systems'
       ],
-      technologies: ['Starlink Emergency', 'Peplink Balance 380', 'Encrypted VPN Tunnels']
+      technologies: ['Backup Systems', 'Hot Failover', 'Secure VPN Solutions']
     },
     {
       title: 'Municipal Government Modernization',
