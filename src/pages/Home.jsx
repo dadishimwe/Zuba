@@ -58,13 +58,6 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
               <FadeIn>
-                <img
-                  src={zubaLightLogo}
-                  alt="Zuba Broadband Technology"
-                  className="h-16 w-auto mb-8"
-                />
-              </FadeIn>
-              <FadeIn delay={200}>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
                   Connecting the <span className="zuba-accent">Unconnected</span>
                 </h1>
