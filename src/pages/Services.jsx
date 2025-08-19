@@ -10,24 +10,24 @@ import ctaLongImage from '@/assets/images/cta-long.png'
 const Services = () => {
   const starlinkSolutions = [
     {
-      title: 'Starlink Residential',
-      description: 'High-speed internet for homes and small offices',
-      features: ['25-100 Mbps download speeds', 'Low latency (20-40ms)', 'Self-installation option', 'No data caps']
+      title: 'Flat High-Performance',
+      description: 'High-speed internet for large businesses',
+      features: ['up to 350 Mbps download speeds', 'Low latency (20-40ms)', 'Static IP options', 'Advanced routing']
     },
     {
-      title: 'Starlink Business',
+      title: 'Starlink Enterprise',
       description: 'Enterprise-grade connectivity for businesses',
-      features: ['40-220 Mbps download speeds', 'Priority support', 'Static IP options', 'Advanced routing']
+      features: ['up to 300 Mbps download speeds', 'low latency (20-40ms)', 'Static IP options', 'Advanced routing']
     },
     {
-      title: 'Starlink Maritime',
-      description: 'Reliable connectivity for vessels at sea',
-      features: ['50-200 Mbps download speeds', 'Global maritime coverage', 'Weather-resistant equipment', '24/7 support']
+      title: 'Stalink Standard-Actuated',
+      description: 'Reliable connectivity for Medium and small businesses',
+      features: ['up to 220 Mbps download speeds', 'Auto-aligning', 'Static IP options', 'Starlink router']
     },
     {
-      title: 'Starlink Aviation',
-      description: 'In-flight connectivity for aircraft',
-      features: ['Up to 350 Mbps download speeds', 'Low-latency for real-time applications', 'Aircraft integration', 'Global coverage']
+      title: 'Starlink Mini',
+      description: 'In-motion connectivity for vehicles',
+      features: ['Up to 180 Mbps download speeds', 'Low-latency for real-time applications', 'Vehicle integration', 'Global coverage']
     }
   ]
 
@@ -125,21 +125,21 @@ const Services = () => {
       </section>
 
       {/* Starlink Solutions with Parallax Background */}
-      <ParallaxBackground imageSrc={starlinkLong}>
+      <ParallaxBackground imageSrc={starlinkLong} overlayIntensity="strong">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="text-center text-white">
             <FadeIn>
               <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-sm">
-                  <Satellite className="h-8 w-8 text-white" />
+                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-md shadow-lg">
+                  <Satellite className="h-8 w-8 text-white drop-shadow-sm" />
                 </div>
-                <h2 className="text-4xl md:text-5xl font-bold">
+                <h2 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
                   Starlink Satellite Internet
                 </h2>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white/90">
+              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white/90 drop-shadow-md">
                 High-speed, low-latency satellite internet that connects you anywhere on Earth. From residential to enterprise, maritime to aviation.
               </p>
             </FadeIn>
@@ -178,21 +178,21 @@ const Services = () => {
       </section>
 
       {/* Peplink Solutions with Parallax Background */}
-      <ParallaxBackground imageSrc={peplinkLong}>
+      <ParallaxBackground imageSrc={peplinkLong} overlayIntensity="strong">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="text-center text-white">
             <FadeIn>
               <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-sm">
-                  <Wifi className="h-8 w-8 text-white" />
+                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-md shadow-lg">
+                  <Wifi className="h-8 w-8 text-white drop-shadow-sm" />
                 </div>
-                <h2 className="text-4xl md:text-5xl font-bold">
+                <h2 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
                   Peplink SD-WAN Solutions
                 </h2>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white/90">
+              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white/90 drop-shadow-md">
                 Advanced SD-WAN and SpeedFusion bonding technology for unbreakable connectivity and intelligent traffic management.
               </p>
             </FadeIn>
@@ -283,11 +283,11 @@ const Services = () => {
       </section>
 
       {/* CTA Section with Background Image */}
-      <ParallaxBackground imageSrc={ctaLongImage}>
+      <ParallaxBackground imageSrc={ctaLongImage} overlayIntensity="strong">
         <div className="max-w-4xl mx-auto container-padding text-center">
           <FadeIn>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Get <span className="zuba-accent">Connected</span>?</h2>
-            <p className="text-large mb-8 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white drop-shadow-lg">Ready to Get <span className="zuba-accent">Connected</span>?</h2>
+            <p className="text-large mb-8 text-white drop-shadow-md">
               Our connectivity experts are ready to <span className="zuba-accent">design the perfect solution</span> for your needs. Get started with a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

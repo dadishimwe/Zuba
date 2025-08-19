@@ -76,16 +76,16 @@ const Restaurants = () => {
       />
 
       {/* Hero Section with Parallax Background */}
-      <ParallaxBackground imageSrc={restaurantImage}>
+      <ParallaxBackground imageSrc={restaurantImage} overlayIntensity="strong">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="text-center text-white">
             <FadeIn>
               <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-sm">
-                  <Utensils className="h-8 w-8 text-white" />
+                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-md shadow-lg">
+                  <Utensils className="h-8 w-8 text-white drop-shadow-sm" />
                 </div>
                 <div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-2">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg">
                     Restaurants & Cafes
                   </h1>
                   <p className="text-lg text-white font-medium">Connected <span className="text-orange-400 font-semibold">Dining Experience</span></p>
@@ -93,7 +93,7 @@ const Restaurants = () => {
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white">
+              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white drop-shadow-md">
                 Keep your restaurant running smoothly with reliable connectivity for <span className="text-orange-400 font-semibold">POS systems, online ordering, guest Wi-Fi, and multi-location management</span>.
               </p>
             </FadeIn>

@@ -82,7 +82,7 @@ const PeplinkServices = () => {
       />
 
       {/* Hero Section with Parallax Background */}
-      <ParallaxBackground imageSrc={peplinkLongImage}>
+      <ParallaxBackground imageSrc={peplinkLongImage} overlayIntensity="strong">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="text-center">
             <FadeIn>
@@ -91,13 +91,13 @@ const PeplinkServices = () => {
                 alt="Peplink"
                 className="h-20 w-auto mx-auto mb-8"
               />
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
                 <span className="text-orange-600">Unbreakable</span>
                 <span className="block text-white">Connectivity</span>
               </h1>
             </FadeIn>
             <FadeIn delay={400}>
-              <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl leading-relaxed">
+              <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl leading-relaxed drop-shadow-md">
                 Advanced SD-WAN solutions with <span className="zuba-blue">SpeedFusion technology</span> for enterprise-grade network reliability and performance.
               </p>
             </FadeIn>

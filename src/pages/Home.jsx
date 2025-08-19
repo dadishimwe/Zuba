@@ -55,64 +55,64 @@ const Home = () => {
       {/* Hero Section */}
       <ParallaxBackground imageSrc={heroImage} mobileImageSrc={heroMobileImage}>
         <div className="max-w-7xl mx-auto container-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-7 text-center lg:text-left">
               <FadeIn>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
-                  Connecting the <span className="zuba-accent">Unconnected</span>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 lg:mb-6 leading-tight text-white">
+                  Innovation in every <span className="zuba-accent">Connection</span>
                 </h1>
               </FadeIn>
               <FadeIn delay={200}>
-                <p className="text-base lg:text-large mb-6 lg:mb-8 max-w-2xl text-white/90">
+                <p className="text-sm sm:text-base lg:text-large mb-6 lg:mb-8 max-w-2xl mx-auto lg:mx-0 text-white/90 leading-relaxed">
                   As an authorized <span className="text-white font-semibold">Starlink</span> and <span className="text-white font-semibold">Peplink</span> reseller, we provide <span className="text-white font-semibold">professional-grade</span> satellite internet and SD-WAN solutions for businesses, maritime, aviation, and remote locations worldwide.
                 </p>
               </FadeIn>
               <FadeIn delay={400}>
-                <Link to="/contact" className="btn-primary">
+                <Link to="/contact" className="btn-primary inline-flex items-center justify-center w-full sm:w-auto">
                   Get Started
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
               </FadeIn>
             </div>
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-5 mt-8 lg:mt-0">
               <FadeIn delay={600} direction="right">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-white/20">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-12 border border-white/20">
                   <div className="text-center mb-6">
                     <img
                       src={zubaLightLogo}
                       alt="Zuba Broadband Technology"
-                      className="h-12 w-auto mx-auto mb-4"
+                      className="h-10 sm:h-12 w-auto mx-auto mb-4"
                     />
                     <p className="text-xs text-white/90">
                       Authorized Starlink & Peplink Reseller
                     </p>
                   </div>
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-4">
-                      <div className="h-12 w-12 rounded-lg bg-white/20 flex items-center justify-center">
-                        <Globe className="h-6 w-6 text-white" />
+                  <div className="space-y-4 sm:space-y-6">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg bg-white/20 flex items-center justify-center flex-shrink-0">
+                        <Globe className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                       </div>
-                      <div>
-                        <div className="font-medium text-white">Global Coverage</div>
-                        <div className="text-small text-white/70">Worldwide connectivity</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <div className="h-12 w-12 rounded-lg bg-white/20 flex items-center justify-center">
-                        <Shield className="h-6 w-6 text-white" />
-                      </div>
-                      <div>
-                        <div className="font-medium text-white">99.9% Uptime</div>
-                        <div className="text-small text-white/70">Enterprise reliability</div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-medium text-white text-sm sm:text-base">Global Coverage</div>
+                        <div className="text-xs sm:text-small text-white/70">Worldwide connectivity</div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <div className="h-12 w-12 rounded-lg bg-white/20 flex items-center justify-center">
-                        <Zap className="h-6 w-6 text-white" />
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg bg-white/20 flex items-center justify-center flex-shrink-0">
+                        <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                       </div>
-                      <div>
-                        <div className="font-medium text-white">24/7 Support</div>
-                        <div className="text-small text-white/70">Expert assistance</div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-medium text-white text-sm sm:text-base">99.9% Uptime</div>
+                        <div className="text-xs sm:text-small text-white/70">Enterprise reliability</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg bg-white/20 flex items-center justify-center flex-shrink-0">
+                        <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-medium text-white text-sm sm:text-base">24/7 Support</div>
+                        <div className="text-xs sm:text-small text-white/70">Expert assistance</div>
                       </div>
                     </div>
                   </div>
@@ -302,12 +302,12 @@ const Home = () => {
       <LocationMap />
 
       {/* CTA Section with Background Image */}
-      <ParallaxBackground imageSrc={ctaLongImage}>
+      <ParallaxBackground imageSrc={ctaLongImage} overlayIntensity="strong">
         <div className="max-w-4xl mx-auto container-padding text-center">
-          <h2 className="mb-4 text-white">
+          <h2 className="mb-4 text-white drop-shadow-lg">
             Ready to get <span className="zuba-accent">connected</span>?
           </h2>
-          <p className="text-large mb-8 text-white">
+          <p className="text-large mb-8 text-white drop-shadow-md">
             Contact us today for a free consultation and discover how we can <span className="zuba-accent">transform</span> your connectivity.
           </p>
           <Link to="/contact" className="btn-primary bg-zuba-accent hover:bg-zuba-accent-dark text-white border-zuba-accent">

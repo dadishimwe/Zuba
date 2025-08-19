@@ -174,11 +174,11 @@ const Blog = () => {
       )}
 
       {/* Newsletter CTA */}
-      <ParallaxBackground imageSrc={ctaLongImage}>
+      <ParallaxBackground imageSrc={ctaLongImage} overlayIntensity="strong">
         <div className="max-w-4xl mx-auto container-padding text-center">
           <FadeIn>
-            <h2 className="mb-4 text-white">Stay updated with our insights</h2>
-            <p className="text-large mb-8 text-white/90">
+            <h2 className="mb-4 text-white drop-shadow-lg">Stay updated with our insights</h2>
+            <p className="text-large mb-8 text-white/90 drop-shadow-md">
               Get the latest articles, case studies, and industry insights delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">

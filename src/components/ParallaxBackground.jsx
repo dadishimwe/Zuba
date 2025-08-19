@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ParallaxBackground = ({ imageSrc, mobileImageSrc, children, className = "" }) => {
+const ParallaxBackground = ({ imageSrc, mobileImageSrc, children, className = "", overlayIntensity = "medium" }) => {
   const containerRef = useRef(null);
   const imageRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -72,7 +72,13 @@ const ParallaxBackground = ({ imageSrc, mobileImageSrc, children, className = ""
       />
 
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/30" />
+      <div className={`absolute inset-0 ${
+        overlayIntensity === "strong" 
+          ? "bg-gradient-to-br from-black/70 via-black/60 to-black/80"
+          : overlayIntensity === "light"
+          ? "bg-gradient-to-br from-black/30 via-black/20 to-black/40"
+          : "bg-gradient-to-br from-black/50 via-black/40 to-black/60"
+      }`} />
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center">

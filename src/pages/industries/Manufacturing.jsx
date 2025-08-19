@@ -83,16 +83,16 @@ const Manufacturing = () => {
       />
 
       {/* Hero Section with Parallax Background */}
-      <ParallaxBackground imageSrc={industrialImage}>
+      <ParallaxBackground imageSrc={industrialImage} overlayIntensity="strong">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="text-center text-white">
             <FadeIn>
               <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-sm">
-                  <Factory className="h-8 w-8 text-white" />
+                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-md shadow-lg">
+                  <Factory className="h-8 w-8 text-white drop-shadow-sm" />
                 </div>
                 <div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-2">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg">
                     Manufacturing & Industrial
                   </h1>
                   <p className="text-lg text-white font-medium">Industry 4.0 <span className="text-orange-400 font-semibold">Connectivity</span></p>
@@ -100,7 +100,7 @@ const Manufacturing = () => {
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white">
+              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white drop-shadow-md">
                 Power your smart factory with industrial-grade connectivity solutions supporting <span className="text-orange-400 font-semibold">IoT, automation, and operational technology systems</span>.
               </p>
             </FadeIn>

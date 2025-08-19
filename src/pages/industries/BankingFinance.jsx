@@ -103,26 +103,26 @@ const BankingFinance = () => {
       />
 
       {/* Hero Section with Parallax Background */}
-      <ParallaxBackground imageSrc={bankingImage}>
+      <ParallaxBackground imageSrc={bankingImage} overlayIntensity="strong">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="text-center text-white">
             <FadeIn>
               <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-sm">
-                  <CreditCard className="h-8 w-8 text-white" />
+                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-md shadow-lg">
+                  <CreditCard className="h-8 w-8 text-white drop-shadow-sm" />
                 </div>
                 <div>
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white drop-shadow-lg">
                     <span className="zuba-accent">Banking</span> & Finance
                   </h1>
-                  <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl leading-relaxed">
+                  <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl leading-relaxed drop-shadow-md">
                     Secure, <span className="text-orange-400 font-semibold">PCI DSS compliant</span> connectivity solutions for financial institutions, trading floors, and fintech operations.
                   </p>
                 </div>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white">
+              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white drop-shadow-md">
                 Mission-critical network infrastructure designed for financial institutions requiring the highest levels of <span className="text-orange-400 font-semibold">security, compliance, and reliability</span>.
               </p>
             </FadeIn>

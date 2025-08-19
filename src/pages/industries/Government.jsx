@@ -69,16 +69,16 @@ const Government = () => {
       />
 
       {/* Hero Section with Parallax Background */}
-      <ParallaxBackground imageSrc={governmentImage}>
+      <ParallaxBackground imageSrc={governmentImage} overlayIntensity="strong">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="text-center text-white">
             <FadeIn>
               <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-sm">
-                  <Building2 className="h-8 w-8 text-white" />
+                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-md shadow-lg">
+                  <Building2 className="h-8 w-8 text-white drop-shadow-sm" />
                 </div>
                 <div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-2">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg">
                     <span className="zuba-accent">Government</span> & Public Safety
                   </h1>
                   <p className="text-lg text-white font-medium">Secure <span className="text-orange-400 font-semibold">Mission-Critical</span> Networks</p>
@@ -86,7 +86,7 @@ const Government = () => {
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white">
+              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white drop-shadow-md">
                 Secure, compliant connectivity solutions designed for government agencies, emergency services, and public safety organizations requiring the <span className="text-orange-400 font-semibold">highest levels of security</span> and reliability.
               </p>
             </FadeIn>

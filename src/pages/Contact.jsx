@@ -128,13 +128,13 @@ const Contact = () => {
   return (
     <div className="pt-16 bg-white">
       {/* Hero Section with Parallax Background */}
-      <ParallaxBackground imageSrc={contactLongImage}>
+      <ParallaxBackground imageSrc={contactLongImage} overlayIntensity="strong">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="text-left">
-            <h1 className="mb-6 text-white">
+            <h1 className="mb-6 text-white drop-shadow-lg">
               Get in <span className="zuba-accent">Touch</span>
             </h1>
-            <p className="text-large mb-8 max-w-2xl text-white">
+            <p className="text-large mb-8 max-w-2xl text-white drop-shadow-md">
               Ready to <span className="zuba-accent">transform</span> your connectivity? Our <span className="text-white font-semibold">expert team</span> is here to help you find the <span className="zuba-accent">perfect solution</span> for your needs.
             </p>
           </div>

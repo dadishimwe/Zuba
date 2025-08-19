@@ -194,17 +194,17 @@ const Solutions = () => {
         if (industry.backgroundImage) {
           return (
             <section key={industry.id}>
-              <ParallaxBackground imageSrc={industry.backgroundImage}>
+              <ParallaxBackground imageSrc={industry.backgroundImage} overlayIntensity="strong">
                 <div className="max-w-7xl mx-auto container-padding">
                   <div className="text-center text-white">
                     <FadeIn>
                       <div className="flex items-center justify-center gap-3 mb-6">
-                        <div className="p-3 rounded-xl bg-white/20 backdrop-blur-sm">
-                          <Icon className="h-8 w-8 text-white" />
+                        <div className="p-3 rounded-xl bg-white/20 backdrop-blur-md shadow-lg">
+                          <Icon className="h-8 w-8 text-white drop-shadow-sm" />
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-bold">{industry.name}</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold drop-shadow-lg">{industry.name}</h2>
                       </div>
-                      <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white/90">
+                      <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white/90 drop-shadow-md">
                         {industry.description}
                       </p>
                       <Link to={`/solutions/${industry.id}`} className="btn-primary bg-white text-foreground hover:bg-white/90">
@@ -429,13 +429,15 @@ const Solutions = () => {
         </div>
       </section>
 
-      {/* CTA Section with Background Image */}
-      <ParallaxBackground imageSrc={ctaLongImage}>
+      {/* CTA Section */}
+      <ParallaxBackground imageSrc={ctaLongImage} overlayIntensity="strong">
         <div className="max-w-4xl mx-auto container-padding text-center">
           <FadeIn>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to <span className="zuba-accent">Transform</span> Your Industry Operations?</h2>
-            <p className="text-large mb-8 text-white">
-              Our industry specialists are ready to <span className="zuba-accent">design a connectivity solution</span> that meets your specific business requirements and operational challenges.
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white drop-shadow-lg">
+              Ready to <span className="zuba-accent">Transform</span> Your Connectivity?
+            </h2>
+            <p className="text-xl text-white mb-8 max-w-2xl mx-auto drop-shadow-md">
+              Our industry experts are ready to design the perfect connectivity solution for your specific needs and challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="btn-primary bg-zuba-accent hover:bg-zuba-accent-dark text-white border-zuba-accent">

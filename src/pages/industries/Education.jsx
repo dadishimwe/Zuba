@@ -76,16 +76,16 @@ const Education = () => {
       />
 
       {/* Hero Section with Parallax Background */}
-      <ParallaxBackground imageSrc={schoolImage}>
+      <ParallaxBackground imageSrc={schoolImage} overlayIntensity="strong">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="text-center text-white">
             <FadeIn>
               <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-sm">
-                  <GraduationCap className="h-8 w-8 text-white" />
+                <div className="p-3 rounded-xl bg-white/20 backdrop-blur-md shadow-lg">
+                  <GraduationCap className="h-8 w-8 text-white drop-shadow-sm" />
                 </div>
                 <div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-2">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg">
                     <span className="zuba-accent">Education</span> Solutions
                   </h1>
                   <p className="text-lg text-white font-medium">Empowering <span className="text-orange-400 font-semibold">Digital Learning</span></p>
@@ -93,7 +93,7 @@ const Education = () => {
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white">
+              <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-white drop-shadow-md">
                 Comprehensive connectivity solutions that enable <span className="text-orange-400 font-semibold">modern education</span>, from K-12 digital learning initiatives to university research networks.
               </p>
             </FadeIn>
