@@ -93,7 +93,6 @@ const BlogPost = () => {
                   />
                   <div>
                     <div className="font-medium text-foreground">{post.author.name}</div>
-                    <div className="text-sm">{post.author.title}</div>
                   </div>
                 </div>
                 <div className="flex items-center text-sm">

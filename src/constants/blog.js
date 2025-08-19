@@ -7,6 +7,7 @@ import ruralBroadbandImage from '../assets/images/blog/satellite-image.jpg';
 import peplinkImage from '../assets/images/blog/peplink-blog.png';
 import enterpriseImage from '../assets/images/blog/enterprise-connectivity.jpg';
 import iotImage from '../assets/images/blog/iot-device.jpg';
+import dadiImage from '@/assets/icons/dadi.jpeg'
 
 export const BLOG_TAGS = [
   { name: 'All Posts', slug: 'all', color: 'bg-gray-200 text-gray-800' },
@@ -22,8 +23,8 @@ export const BLOG_TAGS = [
 export const AUTHORS = {
   dadi_ishimwe: {
     name: 'Dadi Ishimwe',
-    title: 'CEO & Connectivity Expert',
-    avatar: 'https://via.placeholder.com/150/F0F0F0/808080?text=DI',
+    title: '',
+    avatar: dadiImage,
     bio: 'Dadi leads Zuba Broadband with over 15 years of experience in satellite communications and enterprise networking.',
     linkedin: 'https://linkedin.com/in/dadi-ishimwe'
   }
