@@ -180,22 +180,11 @@ const BlogPost = () => {
 
               {/* Dynamic content rendering */}
               {BLOG_CONTENT[post.id] ? (
-                <div className="space-y-8">
-                  {BLOG_CONTENT[post.id].sections.map((section, index) => (
-                    <div key={index}>
-                      <h2>{section.title}</h2>
-                      <div 
-                        className="whitespace-pre-line"
-                        dangerouslySetInnerHTML={{ 
-                          __html: section.content
-                            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                            .replace(/• (.*?)(?=\n|$)/g, '<li>$1</li>')
-                            .replace(/(<li>.*<\/li>)/gs, '<ul class="list-disc list-inside space-y-2 my-4">$1</ul>')
-                        }}
-                      />
-                    </div>
-                  ))}
-                </div>
+                <div 
+                  dangerouslySetInnerHTML={{ 
+                    __html: BLOG_CONTENT[post.id].content
+                  }}
+                />
               ) : (
                 <div className="space-y-8">
                   <div>
@@ -237,26 +226,6 @@ const BlogPost = () => {
                   </div>
                 </div>
               )}
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Author Bio */}
-      <section className="py-16 bg-muted">
-        <div className="max-w-4xl mx-auto container-padding">
-          <FadeIn>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-8 bg-card rounded-lg">
-              <img
-                src={post.author.avatar}
-                alt={post.author.name}
-                className="w-20 h-20 rounded-full"
-              />
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">{post.author.name}</h3>
-                <p className="text-primary font-medium mb-3">{post.author.title}</p>
-                <p className="text-muted-foreground leading-relaxed">{post.author.bio}</p>
-              </div>
             </div>
           </FadeIn>
         </div>

@@ -13,14 +13,13 @@ const BlogCard = ({ post, featured = false, delay = 0 }) => {
 
   const getTagColor = (tag) => {
     const colors = {
-      maritime: 'bg-blue-100 text-blue-700',
-      aviation: 'bg-purple-100 text-purple-700',
-      emergency: 'bg-red-100 text-red-700',
-      business: 'bg-green-100 text-green-700',
-      technical: 'bg-orange-100 text-orange-700',
-      'case-study': 'bg-indigo-100 text-indigo-700',
-      remote: 'bg-teal-100 text-teal-700',
-      rural: 'bg-emerald-100 text-emerald-700'
+      technology: 'bg-blue-100 text-blue-700',
+      enterprise: 'bg-green-100 text-green-700',
+      technical: 'bg-yellow-100 text-yellow-700',
+      'case-studies': 'bg-red-100 text-red-700',
+      remote: 'bg-orange-100 text-orange-700',
+      industry: 'bg-teal-100 text-teal-700',
+      iot: 'bg-purple-100 text-purple-700'
     }
     return colors[tag] || 'bg-gray-100 text-gray-700'
   }
@@ -31,10 +30,17 @@ const BlogCard = ({ post, featured = false, delay = 0 }) => {
         <article className="card-hover rounded-2xl overflow-hidden bg-card border border-gray-200/50">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="aspect-[4/3] bg-muted">
-              {/* Placeholder for image */}
-              <div className="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                <span className="text-muted-foreground text-sm">Featured Image</span>
-              </div>
+              {post.image ? (
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                  <span className="text-muted-foreground text-sm">Featured Image</span>
+                </div>
+              )}
             </div>
             <div className="p-8">
               <div className="flex flex-wrap gap-2 mb-4">
@@ -83,10 +89,17 @@ const BlogCard = ({ post, featured = false, delay = 0 }) => {
     <FadeIn delay={delay}>
       <article className="card-hover rounded-xl overflow-hidden bg-card border border-gray-200/50">
         <div className="aspect-[16/10] bg-muted">
-          {/* Placeholder for image */}
-          <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-            <span className="text-muted-foreground text-sm">Article Image</span>
-          </div>
+          {post.image ? (
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+              <span className="text-muted-foreground text-sm">Article Image</span>
+            </div>
+          )}
         </div>
         
         <div className="p-6">

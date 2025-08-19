@@ -4,8 +4,10 @@ import SEOHead from '@/components/SEOHead.jsx'
 import FadeIn from '@/components/FadeIn.jsx'
 import BlogCard from '@/components/blog/BlogCard.jsx'
 import TagFilter from '@/components/blog/TagFilter.jsx'
+import ParallaxBackground from '@/components/ParallaxBackground.jsx'
 import { Search, ArrowRight, BookOpen, Users, Calendar } from 'lucide-react'
 import { BLOG_POSTS } from '@/constants/blog.js'
+import ctaLongImage from '@/assets/images/cta-long.png'
 
 const Blog = () => {
   const [activeTag, setActiveTag] = useState('all')
@@ -172,27 +174,39 @@ const Blog = () => {
       )}
 
       {/* Newsletter CTA */}
-      <section className="section-padding bg-muted">
+      <ParallaxBackground imageSrc={ctaLongImage}>
         <div className="max-w-4xl mx-auto container-padding text-center">
           <FadeIn>
-            <h2 className="mb-4">Stay updated with our insights</h2>
-            <p className="text-large mb-8">
+            <h2 className="mb-4 text-white">Stay updated with our insights</h2>
+            <p className="text-large mb-8 text-white/90">
               Get the latest articles, case studies, and industry insights delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-background border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent text-white placeholder-white/70"
               />
-              <button className="btn-primary">
+              <button 
+                className="btn-primary text-white"
+                style={{
+                  backgroundColor: '#ff4d00',
+                  borderColor: '#ff4d00'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = 'rgba(255, 77, 0, 0.9)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = '#ff4d00';
+                }}
+              >
                 Subscribe
                 <ArrowRight className="h-4 w-4" />
               </button>
             </div>
           </FadeIn>
         </div>
-      </section>
+      </ParallaxBackground>
     </div>
   )
 }
