@@ -7,7 +7,7 @@ import { ArrowRight, Hotel, Wifi, Users, Star, CheckCircle, MapPin, Clock, Smart
 import hotelImage from '@/assets/images/hotel-long.jpg';
 import highSpeedImage from '@/assets/images/solutions/speed-test.png';
 import qosImage from '@/assets/images/solutions/QoS-square.png';
-import iotImage from '@/assets/images/solutions/IoT-long.jpg';
+import iotImage from '@/assets/images/solutions/IoT-long.png';
 
 const Hospitality = () => {
   const solutions = [
