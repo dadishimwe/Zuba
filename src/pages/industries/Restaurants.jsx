@@ -51,30 +51,17 @@ const Restaurants = () => {
 
   const caseStudies = [
     {
-      title: 'Multi-Location Restaurant Chain',
-      client: 'Urban Dining Group',
-      challenge: 'A restaurant chain with 12 locations needed to implement customer engagement solutions and business intelligence while maintaining reliable operations connectivity.',
-      solution: 'Deployed analytics and insights platform with captive portal solutions and customer experience enhancement across all locations.',
-      results: [
-        '25% increase in customer return visits',
-        '40% improvement in marketing campaign effectiveness',
-        'Enhanced customer satisfaction scores',
-        'Streamlined operations with reliable connectivity'
-      ],
-      technologies: ['Analytics Platform', 'Captive Portal Solutions', 'Customer Engagement Tools']
-    },
-    {
-      title: 'Boutique Cafe Digital Transformation',
+      title: 'Coffee Shop Digital Transformation',
       client: 'Artisan Coffee Co.',
-      challenge: 'A boutique cafe needed to modernize their customer experience with digital engagement while maintaining the authentic atmosphere.',
-      solution: 'Implemented customer experience enhancement solutions with branded captive portal and analytics integration.',
+      challenge: 'A popular coffee shop needed to modernize their customer experience with digital engagement while maintaining their authentic atmosphere and improving operational efficiency.',
+      solution: 'Implemented comprehensive captive portal solution with voucher systems, advanced analytics and insights, and intelligent network management for enhanced customer engagement.',
       results: [
-        '50% increase in social media engagement',
-        'Improved customer dwell time and satisfaction',
-        'Enhanced brand recognition and loyalty',
-        'Streamlined operations with reliable connectivity'
+        '50% increase in customer dwell time and engagement',
+        'Enhanced customer experience with branded portal access',
+        'Improved operational insights through analytics',
+        'Streamlined network management and monitoring'
       ],
-      technologies: ['Customer Experience Solutions', 'Branded Portal', 'Analytics Integration']
+      technologies: ['Captive Portal Solutions', 'Voucher Systems', 'Customer Analytics', 'Network Management']
     }
   ];
 
@@ -200,61 +187,86 @@ const Restaurants = () => {
         <div className="max-w-7xl mx-auto container-padding">
           <FadeIn>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Restaurant Success Stories</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Restaurant & Cafe Success Stories</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                See how our connectivity solutions have transformed customer engagement and business operations.
+                Real-world implementations demonstrating the impact of our connectivity solutions in the food service industry.
               </p>
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {caseStudies.map((study, index) => (
-              <FadeIn key={study.title} delay={300 * (index + 1)}>
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="p-2 rounded-lg bg-orange-600 text-white">
-                      <Coffee className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{study.title}</h3>
-                      <p className="text-orange-600 font-medium">{study.client}</p>
-                    </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Case Study Content */}
+            <FadeIn>
+              <div className="space-y-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 rounded-xl bg-orange-600 text-white">
+                    <Coffee className="h-8 w-8" />
                   </div>
-                  
-                  <div className="space-y-6">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
-                      <p className="text-gray-600">{study.challenge}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
-                      <p className="text-gray-600">{study.solution}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Results</h4>
-                      <ul className="space-y-2">
-                        {study.results.map((result, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <div className="w-2 h-2 bg-orange-600 rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-gray-600">{result}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Technologies</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {study.technologies.map((tech, idx) => (
-                          <span key={idx} className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">{caseStudies[0].title}</h3>
+                    <p className="text-orange-600 font-medium">{caseStudies[0].client}</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Challenge</h4>
+                    <p className="text-gray-600 leading-relaxed">{caseStudies[0].challenge}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Solution</h4>
+                    <p className="text-gray-600 leading-relaxed">{caseStudies[0].solution}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Results</h4>
+                    <ul className="space-y-3">
+                      {caseStudies[0].results.map((result, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-orange-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">{result}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Technologies</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {caseStudies[0].technologies.map((tech, idx) => (
+                        <span key={idx} className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
-              </FadeIn>
-            ))}
+              </div>
+            </FadeIn>
+
+            {/* Case Study Image */}
+            <FadeIn delay={200}>
+              <div className="relative">
+                <img
+                  src="/src/assets/images/case_studies/cafe-case-study.jpg"
+                  alt="Coffee Shop Digital Transformation"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl"></div>
+                
+                {/* Floating stats card */}
+                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-orange-600">50%</div>
+                      <div className="text-xs text-gray-600">Customer Engagement</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-orange-600">24/7</div>
+                      <div className="text-xs text-gray-600">Network Management</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>

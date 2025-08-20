@@ -51,30 +51,17 @@ const Manufacturing = () => {
 
   const caseStudies = [
     {
-      title: 'Automotive Manufacturing Network',
-      client: 'Precision Auto Manufacturing',
-      challenge: 'A large automotive manufacturing facility needed to implement reliable network infrastructure to support modern production systems while ensuring security and operational continuity.',
-      solution: 'Deployed 24/7 network monitoring with site-to-site VPN connectivity and industrial network reliability solutions across all production facilities.',
+      title: 'Industrial Manufacturing Network',
+      client: 'Precision Manufacturing Corp',
+      challenge: 'A large manufacturing facility needed to implement reliable network infrastructure to support modern production systems while ensuring security and operational continuity.',
+      solution: 'Deployed comprehensive 24/7 network monitoring with site-to-site VPN connectivity and industrial network reliability solutions across all production facilities.',
       results: [
         '99.9% network uptime across all production lines',
         '50% reduction in production downtime',
         'Enhanced security for sensitive manufacturing data',
         'Streamlined operations with centralized management'
       ],
-      technologies: ['24/7 Monitoring', 'Site-to-Site VPN', 'Industrial Network Solutions']
-    },
-    {
-      title: 'Multi-Site Manufacturing Operations',
-      client: 'Global Manufacturing Corp',
-      challenge: 'A manufacturing company with 8 production facilities needed secure, reliable connectivity between all locations while maintaining operational efficiency.',
-      solution: 'Implemented comprehensive network monitoring and VPN solutions with industrial-grade reliability across all manufacturing sites.',
-      results: [
-        'Seamless connectivity between all facilities',
-        'Improved production coordination and efficiency',
-        'Enhanced data security and compliance',
-        'Reduced operational costs through centralized management'
-      ],
-      technologies: ['Network Monitoring', 'VPN Solutions', 'Industrial Reliability']
+      technologies: ['24/7 Monitoring', 'Site-to-Site VPN', 'Industrial Network Solutions', 'Centralized Management']
     }
   ];
 
@@ -202,59 +189,84 @@ const Manufacturing = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Manufacturing Success Stories</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                See how our connectivity solutions have transformed manufacturing operations and improved efficiency.
+                Real-world implementations demonstrating the impact of our connectivity solutions in industrial manufacturing.
               </p>
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {caseStudies.map((study, index) => (
-              <FadeIn key={study.title} delay={300 * (index + 1)}>
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="p-2 rounded-lg bg-gray-700 text-white">
-                      <Factory className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{study.title}</h3>
-                      <p className="text-gray-600 font-medium">{study.client}</p>
-                    </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Case Study Content */}
+            <FadeIn>
+              <div className="space-y-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 rounded-xl bg-gray-700 text-white">
+                    <Factory className="h-8 w-8" />
                   </div>
-                  
-                  <div className="space-y-6">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
-                      <p className="text-gray-600">{study.challenge}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
-                      <p className="text-gray-600">{study.solution}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Results</h4>
-                      <ul className="space-y-2">
-                        {study.results.map((result, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-gray-600">{result}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Technologies</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {study.technologies.map((tech, idx) => (
-                          <span key={idx} className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">{caseStudies[0].title}</h3>
+                    <p className="text-gray-600 font-medium">{caseStudies[0].client}</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Challenge</h4>
+                    <p className="text-gray-600 leading-relaxed">{caseStudies[0].challenge}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Solution</h4>
+                    <p className="text-gray-600 leading-relaxed">{caseStudies[0].solution}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Results</h4>
+                    <ul className="space-y-3">
+                      {caseStudies[0].results.map((result, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">{result}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Technologies</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {caseStudies[0].technologies.map((tech, idx) => (
+                        <span key={idx} className="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
-              </FadeIn>
-            ))}
+              </div>
+            </FadeIn>
+
+            {/* Case Study Image */}
+            <FadeIn delay={200}>
+              <div className="relative">
+                <img
+                  src="/src/assets/images/case_studies/manufacturing-case-study.jpg"
+                  alt="Industrial Manufacturing Network"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl"></div>
+                
+                {/* Floating stats card */}
+                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-gray-700">99.9%</div>
+                      <div className="text-xs text-gray-600">Network Uptime</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-gray-700">50%</div>
+                      <div className="text-xs text-gray-600">Downtime Reduction</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>

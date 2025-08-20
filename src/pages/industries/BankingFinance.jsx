@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import SEOHead from '@/components/SEOHead.jsx';
 import FadeIn from '@/components/FadeIn.jsx';
 import ParallaxBackground from '@/components/ParallaxBackground.jsx';
-import { ArrowRight, CreditCard, Shield, Lock, Monitor, Building, CheckCircle, Users, Clock, Globe, Zap, Activity } from 'lucide-react';
+import { ArrowRight, CreditCard, Shield, Lock, Monitor, Building, CheckCircle, Users, Clock, Globe, Zap, Activity, Building2 } from 'lucide-react';
 import bankingImage from '@/assets/images/banking-long.jpg';
 import secureNetworkImage from '@/assets/images/solutions/internet-secure-square.png';
 import vpnImage from '@/assets/images/solutions/peplink-vpn.png';
@@ -51,30 +51,17 @@ const BankingFinance = () => {
 
   const caseStudies = [
     {
-      title: 'Multi-National Bank Network Upgrade',
-      client: 'Global Financial Institution',
-      challenge: 'A major international bank needed to upgrade their network infrastructure across 50+ branches while maintaining strict security compliance and zero downtime requirements.',
-      solution: 'Implemented enterprise-grade secure network infrastructure with encrypted VPN solutions and 24/7 monitoring across all locations.',
+      title: 'Insurance Firm Connectivity Solution',
+      client: 'Prime Insurance Group',
+      challenge: 'A major insurance firm was facing high internet costs and security concerns while needing reliable connectivity for their multi-branch operations and customer data management.',
+      solution: 'Implemented secure network infrastructure with advanced analytics and monitoring capabilities, providing cost-effective connectivity solutions across all branches.',
       results: [
-        '100% compliance with financial security standards',
-        'Zero downtime during implementation',
-        '50% improvement in network performance',
-        'Enhanced security posture across all branches'
+        '40% reduction in internet connectivity costs',
+        'Enhanced security with real-time threat monitoring',
+        'Improved customer data protection and compliance',
+        'Centralized network management and analytics'
       ],
-      technologies: ['Enterprise Security Protocols', 'Encrypted VPN Solutions', '24/7 Monitoring Systems']
-    },
-    {
-      title: 'Investment Firm Connectivity Solution',
-      client: 'Regional Investment Bank',
-      challenge: 'An investment firm required ultra-secure connectivity for their trading operations with real-time data access and failover capabilities.',
-      solution: 'Deployed secure network infrastructure with redundant connections and continuous monitoring for mission-critical operations.',
-      results: [
-        '99.99% uptime for trading operations',
-        'Real-time data access across all systems',
-        'Instant failover during network issues',
-        'Enhanced trading platform performance'
-      ],
-      technologies: ['Secure Network Infrastructure', 'Redundant Connectivity', 'Real-time Monitoring']
+      technologies: ['Secure Network Infrastructure', 'Advanced Analytics', 'Real-time Monitoring', 'Cost Optimization']
     }
   ];
 
@@ -191,61 +178,86 @@ const BankingFinance = () => {
         <div className="max-w-7xl mx-auto container-padding">
           <FadeIn>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Success Stories</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Banking & Finance Success Stories</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Real-world implementations demonstrating the impact of our financial connectivity solutions.
+                Real-world implementations demonstrating the impact of our secure connectivity solutions in the financial sector.
               </p>
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {caseStudies.map((study, index) => (
-              <FadeIn key={study.title} delay={300 * (index + 1)}>
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="p-2 rounded-lg bg-blue-600 text-white">
-                      <Building className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{study.title}</h3>
-                      <p className="text-blue-600 font-medium">{study.client}</p>
-                    </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Case Study Content */}
+            <FadeIn>
+              <div className="space-y-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 rounded-xl bg-slate-600 text-white">
+                    <Building2 className="h-8 w-8" />
                   </div>
-                  
-                  <div className="space-y-6">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
-                      <p className="text-gray-600">{study.challenge}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
-                      <p className="text-gray-600">{study.solution}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Results</h4>
-                      <ul className="space-y-2">
-                        {study.results.map((result, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-gray-600">{result}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Technologies</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {study.technologies.map((tech, idx) => (
-                          <span key={idx} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">{caseStudies[0].title}</h3>
+                    <p className="text-slate-600 font-medium">{caseStudies[0].client}</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Challenge</h4>
+                    <p className="text-gray-600 leading-relaxed">{caseStudies[0].challenge}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Solution</h4>
+                    <p className="text-gray-600 leading-relaxed">{caseStudies[0].solution}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Results</h4>
+                    <ul className="space-y-3">
+                      {caseStudies[0].results.map((result, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">{result}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Technologies</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {caseStudies[0].technologies.map((tech, idx) => (
+                        <span key={idx} className="px-4 py-2 bg-slate-100 text-slate-800 rounded-full text-sm font-medium">
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
-              </FadeIn>
-            ))}
+              </div>
+            </FadeIn>
+
+            {/* Case Study Image */}
+            <FadeIn delay={200}>
+              <div className="relative">
+                <img
+                  src="/src/assets/images/case_studies/banking-case-study.jpg"
+                  alt="Insurance Firm Connectivity Solution"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl"></div>
+                
+                {/* Floating stats card */}
+                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-slate-700">40%</div>
+                      <div className="text-xs text-slate-600">Cost Reduction</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-slate-700">24/7</div>
+                      <div className="text-xs text-slate-600">Monitoring</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>

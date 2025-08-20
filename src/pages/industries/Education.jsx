@@ -51,30 +51,17 @@ const Education = () => {
 
   const caseStudies = [
     {
-      title: 'University Campus Network Modernization',
-      client: 'State University System',
-      challenge: 'A large university system needed to upgrade their network infrastructure to support modern educational technology while ensuring student safety and optimal learning experiences.',
-      solution: 'Implemented comprehensive content filtering, quality of service management, and academic network management across all campuses.',
+      title: 'Modern Smart School Network Upgrade',
+      client: 'Innovation Academy',
+      challenge: 'A modern smart school needed to upgrade their network infrastructure to support cutting-edge educational technology while ensuring student safety and optimal learning experiences.',
+      solution: 'Implemented comprehensive network infrastructure with content filtering, quality of service management, and academic network optimization for modern educational technology.',
       results: [
-        'Enhanced student safety with advanced content filtering',
-        'Improved learning application performance by 60%',
-        'Streamlined IT management across multiple campuses',
-        'Increased student engagement with reliable connectivity'
+        'Enhanced learning experience with reliable connectivity',
+        'Improved student safety with content filtering',
+        'Optimized network performance for educational applications',
+        'Streamlined IT management and monitoring'
       ],
-      technologies: ['Content Filtering', 'QoS Management', 'Network Management']
-    },
-    {
-      title: 'K-12 School District Digital Transformation',
-      client: 'Metropolitan School District',
-      challenge: 'A school district with 25 schools needed to implement 1:1 device programs while maintaining safe internet access and optimal learning conditions.',
-      solution: 'Deployed educational-focused connectivity solutions with comprehensive safety controls and performance optimization.',
-      results: [
-        'Successful 1:1 device program implementation',
-        '100% compliance with educational safety requirements',
-        'Improved teacher productivity with reliable tools',
-        'Enhanced student learning outcomes'
-      ],
-      technologies: ['Educational Connectivity', 'Safety Controls', 'Performance Optimization']
+      technologies: ['Content Filtering', 'QoS Management', 'Academic Network Optimization', 'Student Safety Systems']
     }
   ];
 
@@ -200,61 +187,86 @@ const Education = () => {
         <div className="max-w-7xl mx-auto container-padding">
           <FadeIn>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Educational Success Stories</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Education Success Stories</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                See how our connectivity solutions have transformed learning environments and educational outcomes.
+                Real-world implementations demonstrating the impact of our connectivity solutions in modern education.
               </p>
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {caseStudies.map((study, index) => (
-              <FadeIn key={study.title} delay={300 * (index + 1)}>
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="p-2 rounded-lg bg-green-600 text-white">
-                      <GraduationCap className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{study.title}</h3>
-                      <p className="text-green-600 font-medium">{study.client}</p>
-                    </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Case Study Content */}
+            <FadeIn>
+              <div className="space-y-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 rounded-xl bg-blue-600 text-white">
+                    <GraduationCap className="h-8 w-8" />
                   </div>
-                  
-                  <div className="space-y-6">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
-                      <p className="text-gray-600">{study.challenge}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
-                      <p className="text-gray-600">{study.solution}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Results</h4>
-                      <ul className="space-y-2">
-                        {study.results.map((result, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-gray-600">{result}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Technologies</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {study.technologies.map((tech, idx) => (
-                          <span key={idx} className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">{caseStudies[0].title}</h3>
+                    <p className="text-blue-600 font-medium">{caseStudies[0].client}</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Challenge</h4>
+                    <p className="text-gray-600 leading-relaxed">{caseStudies[0].challenge}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Solution</h4>
+                    <p className="text-gray-600 leading-relaxed">{caseStudies[0].solution}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Results</h4>
+                    <ul className="space-y-3">
+                      {caseStudies[0].results.map((result, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">{result}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Technologies</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {caseStudies[0].technologies.map((tech, idx) => (
+                        <span key={idx} className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
-              </FadeIn>
-            ))}
+              </div>
+            </FadeIn>
+
+            {/* Case Study Image */}
+            <FadeIn delay={200}>
+              <div className="relative">
+                <img
+                  src="/src/assets/images/case_studies/school-case-study.jpg"
+                  alt="Modern Smart School Network Upgrade"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl"></div>
+                
+                {/* Floating stats card */}
+                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-blue-600">100%</div>
+                      <div className="text-xs text-gray-600">Student Safety</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-blue-600">24/7</div>
+                      <div className="text-xs text-gray-600">Content Filtering</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>

@@ -51,30 +51,17 @@ const Hospitality = () => {
 
   const caseStudies = [
     {
-      title: 'Luxury Resort Network Transformation',
-      client: 'Premium Beach Resort',
-      challenge: 'A 200-room luxury resort needed to upgrade their network infrastructure to support modern guest expectations while maintaining operational efficiency across multiple facilities.',
-      solution: 'Implemented high-speed internet with quality of service management and IoT control systems for enhanced guest experience.',
+      title: 'Remote Luxury Lodge Connectivity',
+      client: 'Mountain Peak Lodge',
+      challenge: 'A remote luxury lodge needed to upgrade their infrastructure to provide modern connectivity for guests while maintaining operational efficiency, facing challenges with low speeds and outdated infrastructure.',
+      solution: 'Implemented comprehensive connectivity solution with guest and staff network separation, cellular backup systems, SD-WAN technology, and advanced analytics for optimal guest experience.',
       results: [
-        '95% guest satisfaction with internet connectivity',
-        '40% reduction in energy costs through IoT optimization',
-        'Streamlined operations with centralized management',
-        'Enhanced guest experience with smart room controls'
+        'Enhanced guest satisfaction with high-speed connectivity',
+        'Improved operational efficiency with staff network separation',
+        'Reliable connectivity with cellular backup systems',
+        'Advanced analytics for guest behavior insights'
       ],
-      technologies: ['High-Speed Connectivity', 'QoS Management', 'IoT Control Systems']
-    },
-    {
-      title: 'Boutique Hotel Chain Upgrade',
-      client: 'Heritage Hotels Collection',
-      challenge: 'A boutique hotel chain with 15 properties needed to modernize their connectivity while maintaining the unique character of each location.',
-      solution: 'Deployed enterprise-grade connectivity solutions with intelligent network management across all properties.',
-      results: [
-        'Consistent guest experience across all properties',
-        'Improved operational efficiency with centralized management',
-        'Enhanced security for guest and staff networks',
-        'Increased direct bookings through improved online presence'
-      ],
-      technologies: ['Enterprise Connectivity', 'Network Management', 'Security Solutions']
+      technologies: ['Network Separation', 'Cellular Backup', 'SD-WAN Solutions', 'Guest Analytics']
     }
   ];
 
@@ -202,59 +189,84 @@ const Hospitality = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Hospitality Success Stories</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                See how our connectivity solutions have transformed guest experiences and operational efficiency.
+                Real-world implementations demonstrating the impact of our connectivity solutions in luxury hospitality.
               </p>
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {caseStudies.map((study, index) => (
-              <FadeIn key={study.title} delay={300 * (index + 1)}>
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="p-2 rounded-lg bg-amber-600 text-white">
-                      <Hotel className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{study.title}</h3>
-                      <p className="text-amber-600 font-medium">{study.client}</p>
-                    </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Case Study Content */}
+            <FadeIn>
+              <div className="space-y-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 rounded-xl bg-orange-600 text-white">
+                    <Hotel className="h-8 w-8" />
                   </div>
-                  
-                  <div className="space-y-6">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
-                      <p className="text-gray-600">{study.challenge}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
-                      <p className="text-gray-600">{study.solution}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Results</h4>
-                      <ul className="space-y-2">
-                        {study.results.map((result, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <div className="w-2 h-2 bg-amber-600 rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-gray-600">{result}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Technologies</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {study.technologies.map((tech, idx) => (
-                          <span key={idx} className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">{caseStudies[0].title}</h3>
+                    <p className="text-orange-600 font-medium">{caseStudies[0].client}</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Challenge</h4>
+                    <p className="text-gray-600 leading-relaxed">{caseStudies[0].challenge}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Solution</h4>
+                    <p className="text-gray-600 leading-relaxed">{caseStudies[0].solution}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Results</h4>
+                    <ul className="space-y-3">
+                      {caseStudies[0].results.map((result, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-orange-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">{result}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg">Technologies</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {caseStudies[0].technologies.map((tech, idx) => (
+                        <span key={idx} className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
-              </FadeIn>
-            ))}
+              </div>
+            </FadeIn>
+
+            {/* Case Study Image */}
+            <FadeIn delay={200}>
+              <div className="relative">
+                <img
+                  src="/src/assets/images/case_studies/lodge-case-study.jpg"
+                  alt="Remote Luxury Lodge Connectivity"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl"></div>
+                
+                {/* Floating stats card */}
+                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-orange-600">100%</div>
+                      <div className="text-xs text-gray-600">Guest Satisfaction</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-orange-600">24/7</div>
+                      <div className="text-xs text-gray-600">Backup Systems</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
