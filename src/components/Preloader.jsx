@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { Wifi, Download, Upload, Satellite } from 'lucide-react'
+import zubaLightLogo from '@/assets/logos/zuba-light-logo.png'
 
 const Preloader = ({ onComplete }) => {
   const [speed, setSpeed] = useState(0)
@@ -90,14 +91,15 @@ const Preloader = ({ onComplete }) => {
       <div className="preloader-content text-center text-white max-w-md mx-auto p-8">
         {/* Logo */}
         <div className="mb-12">
-          <div className="inline-flex items-center space-x-3 mb-4">
-            <div className="relative">
-              <Satellite className="h-10 w-10 text-slate-300" />
-              <div className="absolute inset-0 rounded-full border border-slate-500/30 animate-ping"></div>
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-slate-200">Zuba Broadband</h1>
-              <p className="text-slate-400 text-sm">Speed Test</p>
+          <div className="flex flex-col items-center space-y-4">
+            <img 
+              src={zubaLightLogo} 
+              alt="Zuba Broadband Technology" 
+              className="h-16 w-auto mb-4"
+            />
+            <div className="text-center">
+              <h1 className="text-2xl font-bold text-slate-200 mb-2">Speed Test</h1>
+              <p className="text-slate-400 text-sm">Establishing connection...</p>
             </div>
           </div>
         </div>
@@ -105,115 +107,62 @@ const Preloader = ({ onComplete }) => {
         {/* Speedometer */}
         <div className="mb-8">
           <div className="relative w-48 h-48 mx-auto">
-            {/* Speedometer Background */}
-            <div className="absolute inset-0 rounded-full border-8 border-slate-600/50"></div>
-            
-            {/* Speed Arc */}
-            <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 100 100">
+            {/* Speedometer background */}
+            <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+              {/* Background circle */}
               <circle
                 cx="50"
                 cy="50"
-                r="42"
+                r="45"
                 fill="none"
-                stroke="currentColor"
-                strokeWidth="6"
-                strokeLinecap="round"
-                className="text-slate-600/30"
-                strokeDasharray="220 1000"
+                stroke="rgba(255, 255, 255, 0.1)"
+                strokeWidth="3"
               />
+              {/* Progress circle */}
               <circle
                 cx="50"
                 cy="50"
-                r="42"
+                r="45"
                 fill="none"
-                stroke="currentColor"
-                strokeWidth="6"
+                stroke="url(#gradient)"
+                strokeWidth="3"
                 strokeLinecap="round"
-                className={getSpeedColor()}
-                strokeDasharray={`${(speed / 300) * 220} 1000`}
-                style={{
-                  transition: 'stroke-dasharray 0.3s ease-out'
-                }}
+                strokeDasharray={`${(speed / 300) * 283} 283`}
+                className="transition-all duration-300 ease-out"
               />
+              {/* Gradient definition */}
+              <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#f97316" />
+                  <stop offset="50%" stopColor="#eab308" />
+                  <stop offset="100%" stopColor="#22c55e" />
+                </linearGradient>
+              </defs>
             </svg>
             
-            {/* Speed Display */}
+            {/* Speed display */}
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <div className={`text-4xl font-bold ${getSpeedColor()}`}>
                 {speed}
               </div>
-              <div className="text-slate-400 text-sm">Mbps</div>
-              <div className="flex items-center gap-1 mt-2">
-                <Download className="h-3 w-3 text-slate-400" />
-                <span className="text-xs text-slate-400">Download</span>
-              </div>
+              <div className="text-sm text-slate-400">Mbps</div>
             </div>
           </div>
         </div>
 
-        {/* Status */}
+        {/* Status text */}
         <div className="mb-6">
-          <div className="text-slate-300 text-sm mb-2">{getPhaseText()}</div>
-          
-          {/* Connection Quality Bars */}
-          <div className="flex justify-center gap-1">
-            {[...Array(5)].map((_, i) => (
-              <div
-                key={i}
-                className={`w-2 h-6 rounded-sm transition-all duration-300 ${
-                  speed > (i + 1) * 60 
-                    ? 'bg-emerald-400' 
-                    : speed > (i + 1) * 30 
-                    ? 'bg-yellow-400' 
-                    : 'bg-slate-600'
-                }`}
-                style={{
-                  animationDelay: `${i * 0.1}s`
-                }}
-              />
-            ))}
-          </div>
+          <p className="text-slate-300 text-sm">{getPhaseText()}</p>
         </div>
 
-        {/* Network Info */}
-        <div className="text-xs text-slate-400 space-y-1">
-          <div className="flex justify-between">
-            <span>Latency:</span>
-            <span className="text-emerald-400">{Math.max(15, 45 - Math.round(speed / 10))}ms</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Jitter:</span>
-            <span className="text-emerald-400">&lt; 5ms</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Server:</span>
-            <span className="text-slate-300">Starlink LEO</span>
-          </div>
-        </div>
-
-        {/* Animated Dots */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(8)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-slate-400/20 rounded-full"
-              style={{
-                left: `${15 + i * 10}%`,
-                top: `${20 + (i % 3) * 30}%`,
-                animation: `twinkle 3s infinite`,
-                animationDelay: `${i * 0.4}s`
-              }}
-            />
-          ))}
+        {/* Progress bar */}
+        <div className="w-full bg-slate-700 rounded-full h-2">
+          <div 
+            className="bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 h-2 rounded-full transition-all duration-300 ease-out"
+            style={{ width: `${(speed / 300) * 100}%` }}
+          ></div>
         </div>
       </div>
-      
-      <style jsx>{`
-        @keyframes twinkle {
-          0%, 100% { opacity: 0.2; transform: scale(1); }
-          50% { opacity: 0.8; transform: scale(1.5); }
-        }
-      `}</style>
     </div>
   )
 }
