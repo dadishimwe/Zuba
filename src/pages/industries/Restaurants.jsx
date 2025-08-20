@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import SEOHead from '@/components/SEOHead.jsx';
 import FadeIn from '@/components/FadeIn.jsx';
 import ParallaxBackground from '@/components/ParallaxBackground.jsx';
-import { ArrowRight, Coffee, Wifi, Users, Star, CheckCircle, MapPin, Clock, Smartphone, Tv, Coffee, Mountain } from 'lucide-react';
+import { ArrowRight, Coffee, Wifi, Users, Star, CheckCircle, MapPin, Clock, Smartphone, Tv, Mountain } from 'lucide-react';
 import restaurantImage from '@/assets/images/restaurant-long.jpg';
 import analyticsImage from '@/assets/images/solutions/speed-test.png';
 import captivePortalImage from '@/assets/images/solutions/cafe-captiveportal-long.jpg';
