@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import SEOHead from '@/components/SEOHead.jsx';
 import FadeIn from '@/components/FadeIn.jsx';
 import ParallaxBackground from '@/components/ParallaxBackground.jsx';
-import { ArrowRight, GraduationCap, BookOpen, Users, Monitor, Shield, CheckCircle, Globe, Zap, Activity, Wifi } from 'lucide-react';
+import { ArrowRight, GraduationCap, Shield, Lock, Monitor, CheckCircle, Users, Clock, Globe, Zap, Activity } from 'lucide-react';
 import schoolImage from '@/assets/images/school-long.jpg';
 import filteringImage from '@/assets/images/solutions/filtering-square.png';
 import qosImage from '@/assets/images/solutions/QoS-square.png';
 import studentComputerImage from '@/assets/images/solutions/student-computer.jpg';
+import schoolCaseStudyImage from '@/assets/images/case_studies/school-case-study.jpg';
 
 const Education = () => {
   const solutions = [
@@ -246,7 +247,7 @@ const Education = () => {
             <FadeIn delay={200}>
               <div className="relative">
                 <img
-                  src="/src/assets/images/case_studies/school-case-study.jpg"
+                  src={schoolCaseStudyImage}
                   alt="Modern Smart School Network Upgrade"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />

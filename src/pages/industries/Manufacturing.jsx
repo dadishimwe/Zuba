@@ -8,6 +8,7 @@ import industrialImage from '@/assets/images/industrial-long.jpg';
 import monitoringImage from '@/assets/images/solutions/24:7-square.png';
 import vpnImage from '@/assets/images/solutions/peplink-vpn.png';
 import iotImage from '@/assets/images/solutions/IoT-image.jpg';
+import manufacturingCaseStudyImage from '@/assets/images/case_studies/manufacturing-case-study.jpg';
 
 const Manufacturing = () => {
   const solutions = [
@@ -246,7 +247,7 @@ const Manufacturing = () => {
             <FadeIn delay={200}>
               <div className="relative">
                 <img
-                  src="/src/assets/images/case_studies/manufacturing-case-study.jpg"
+                  src={manufacturingCaseStudyImage}
                   alt="Industrial Manufacturing Network"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />

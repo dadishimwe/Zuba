@@ -8,6 +8,7 @@ import bankingImage from '@/assets/images/banking-long.jpg';
 import secureNetworkImage from '@/assets/images/solutions/internet-secure-square.png';
 import vpnImage from '@/assets/images/solutions/peplink-vpn.png';
 import monitoringImage from '@/assets/images/solutions/24:7-square.png';
+import bankingCaseStudyImage from '@/assets/images/case_studies/banking-case-study.jpg';
 
 const BankingFinance = () => {
   const solutions = [
@@ -237,7 +238,7 @@ const BankingFinance = () => {
             <FadeIn delay={200}>
               <div className="relative">
                 <img
-                  src="/src/assets/images/case_studies/banking-case-study.jpg"
+                  src={bankingCaseStudyImage}
                   alt="Insurance Firm Connectivity Solution"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />

@@ -6,8 +6,9 @@ import ParallaxBackground from '@/components/ParallaxBackground.jsx';
 import { ArrowRight, Coffee, Wifi, Users, Star, CheckCircle, MapPin, Clock, Smartphone, Tv, Mountain } from 'lucide-react';
 import restaurantImage from '@/assets/images/restaurant-long.jpg';
 import analyticsImage from '@/assets/images/solutions/speed-test.png';
-import captivePortalImage from '@/assets/images/solutions/cafe-captiveportal-long.png';
+import captivePortalImage from '@/assets/images/solutions/cafe-captiveportal-long.jpg';
 import customerExperienceImage from '@/assets/images/solutions/QoS-square.png';
+import cafeCaseStudyImage from '@/assets/images/case_studies/cafe-case-study.jpg';
 
 const Restaurants = () => {
   const solutions = [
@@ -246,7 +247,7 @@ const Restaurants = () => {
             <FadeIn delay={200}>
               <div className="relative">
                 <img
-                  src="/src/assets/images/case_studies/cafe-case-study.jpg"
+                  src={cafeCaseStudyImage}
                   alt="Coffee Shop Digital Transformation"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />

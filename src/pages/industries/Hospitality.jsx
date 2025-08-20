@@ -7,7 +7,8 @@ import { ArrowRight, Hotel, Wifi, Users, Star, CheckCircle, MapPin, Clock, Smart
 import hotelImage from '@/assets/images/hotel-long.jpg';
 import highSpeedImage from '@/assets/images/solutions/speed-test.png';
 import qosImage from '@/assets/images/solutions/QoS-square.png';
-import iotImage from '@/assets/images/solutions/IoT-long.png';
+import iotImage from '@/assets/images/solutions/IoT-long.jpg';
+import lodgeCaseStudyImage from '@/assets/images/case_studies/lodge-case-study.jpg';
 
 const Hospitality = () => {
   const solutions = [
@@ -246,7 +247,7 @@ const Hospitality = () => {
             <FadeIn delay={200}>
               <div className="relative">
                 <img
-                  src="/src/assets/images/case_studies/lodge-case-study.jpg"
+                  src={lodgeCaseStudyImage}
                   alt="Remote Luxury Lodge Connectivity"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
